@@ -24,7 +24,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-about">
     <div class="container-fluid bg-white p-0">
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -53,8 +53,8 @@
                 </div>
             </nav>
 
-            <div class="container-fluid py-5 hero-header hero-inner mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
+            <div class="container-fluid py-4 hero-header hero-inner hero-inner-compact mb-5">
+                <div class="container text-center my-3 pt-3 pb-3">
                     <span class="hero-kicker">De Angels Bar &amp; Grills</span>
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Our Story</h1>
                     <p class="page-lead">Fire-cooked food, drinks worth lingering over, and an outdoor space built for company — in the heart of New Owerri.</p>
@@ -72,18 +72,12 @@
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
-                        <div class="row g-3">
+                        <div class="row g-3 about-collage">
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded about-img wow zoomIn" data-wow-delay="0.1s" src="https://images.unsplash.com/photo-1555931665-5a90aa7d6c3e?auto=format&fit=crop&w=700&q=80" alt="Charcoal grills">
+                                <img class="img-fluid rounded about-img tall about-img-terrace wow zoomIn" data-wow-delay="0.1s" src="img/outdoor-terrace-about.png" alt="De Angels outdoor terrace with garden seating and illuminated signage">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded about-img short wow zoomIn" data-wow-delay="0.3s" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=700&q=80" alt="Cocktails" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded about-img short wow zoomIn" data-wow-delay="0.5s" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Outdoor terrace">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded about-img wow zoomIn" data-wow-delay="0.7s" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="Fine dining plate">
+                                <img class="img-fluid rounded about-img tall wow zoomIn" data-wow-delay="0.3s" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=700&q=80" alt="Cocktails">
                             </div>
                         </div>
                     </div>
@@ -267,24 +261,29 @@
                         <a href="booking.html" class="btn btn-primary py-3 px-5">Reserve Outdoor Seating</a>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="outdoor-panel d-flex align-items-end p-4 p-lg-5">
-                            <div class="row g-3 w-100 text-white">
-                                <div class="col-4">
-                                    <div class="stat-box text-center">
-                                        <h3 class="text-primary mb-1">Open</h3>
-                                        <small>Air dining</small>
+                        <div class="outdoor-panel outdoor-panel--compact outdoor-panel--tall">
+                            <img class="outdoor-panel-img" src="img/outdoor-terrace-about.png" alt="De Angels outdoor terrace with garden seating, orange cushions and illuminated signage">
+                            <span class="outdoor-panel-badge">Outdoor Terrace</span>
+                            <div class="outdoor-panel-overlay" aria-hidden="true"></div>
+                            <div class="outdoor-panel-content p-4 p-lg-5">
+                                <div class="row g-3 w-100 text-white">
+                                    <div class="col-4">
+                                        <div class="stat-box text-center">
+                                            <h3 class="text-primary mb-1">Open</h3>
+                                            <small>Air dining</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-box text-center">
-                                        <h3 class="text-primary mb-1">Live</h3>
-                                        <small>Grill nights</small>
+                                    <div class="col-4">
+                                        <div class="stat-box text-center">
+                                            <h3 class="text-primary mb-1">Live</h3>
+                                            <small>Grill nights</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-box text-center">
-                                        <h3 class="text-primary mb-1">Late</h3>
-                                        <small>Until 5 AM</small>
+                                    <div class="col-4">
+                                        <div class="stat-box text-center">
+                                            <h3 class="text-primary mb-1">Late</h3>
+                                            <small>Until 5 AM</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +305,7 @@
                             <div class="review-stars mb-3">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <p class="mb-4">“The grills and grilled chicken are unmatched. We come for the food and stay for the outdoor vibe — De Angels feels like a proper hangout, not a template restaurant.”</p>
+                            <p class="mb-4">“The grills and pepper chicken are unmatched. We come for the food and stay for the outdoor vibe — De Angels feels like a proper hangout, not a template restaurant.”</p>
                             <div class="d-flex align-items-center">
                                 <img class="review-avatar me-3" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Tunde A.">
                                 <div>

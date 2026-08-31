@@ -1,0 +1,260 @@
+/*** Admin manage pages — modernized ***/
+
+.manage-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.manage-toolbar h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.manage-card {
+    background: var(--vault-panel);
+    border: 1px solid var(--vault-border);
+    border-radius: var(--vault-radius-lg);
+    padding: clamp(18px, 2.5vw, 24px);
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+}
+
+.manage-card:hover {
+    border-color: var(--vault-border-strong);
+}
+
+.manage-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -8px;
+    padding: 0 8px;
+}
+
+.manage-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.manage-table th {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--vault-muted);
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--vault-border);
+    white-space: nowrap;
+}
+
+.manage-table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    vertical-align: middle;
+}
+
+.manage-table tr:last-child td {
+    border-bottom: none;
+}
+
+.manage-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.status-pill {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.status-pill.pending {
+    background: rgba(212, 160, 23, 0.15);
+    color: var(--vault-gold);
+}
+
+.status-pill.confirmed {
+    background: rgba(0, 166, 81, 0.15);
+    color: var(--vault-primary);
+}
+
+.status-pill.cancelled {
+    background: rgba(237, 28, 36, 0.12);
+    color: #ff8a8f;
+}
+
+.status-pill.live {
+    background: rgba(0, 166, 81, 0.15);
+    color: var(--vault-primary);
+}
+
+.status-pill.off {
+    background: rgba(237, 28, 36, 0.12);
+    color: #ff8a8f;
+}
+
+.manage-btn {
+    border: 1px solid var(--vault-border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--vault-text);
+    border-radius: var(--vault-radius-sm);
+    padding: 8px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    margin: 2px 4px 2px 0;
+    min-height: 36px;
+}
+
+.manage-btn:hover {
+    background: var(--vault-primary-soft);
+    border-color: rgba(0, 166, 81, 0.3);
+}
+
+.manage-btn.danger:hover {
+    background: rgba(237, 28, 36, 0.12);
+    border-color: rgba(237, 28, 36, 0.3);
+}
+
+.manage-btn.primary {
+    background: var(--vault-primary);
+    border-color: var(--vault-primary);
+    color: #fff;
+}
+
+.manage-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.manage-form-grid .full {
+    grid-column: span 2;
+}
+
+.manage-field label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--vault-muted);
+    margin-bottom: 6px;
+}
+
+.manage-field input,
+.manage-field select,
+.manage-field textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--vault-border);
+    border-radius: var(--vault-radius-md);
+    color: var(--vault-text);
+    padding: 12px 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    min-height: 46px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.manage-field textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.manage-field input:focus,
+.manage-field select:focus,
+.manage-field textarea:focus {
+    outline: none;
+    border-color: rgba(0, 166, 81, 0.5);
+    box-shadow: 0 0 0 3px rgba(0, 166, 81, 0.1);
+}
+
+.manage-field select option {
+    color: var(--vault-dark);
+}
+
+.message-detail {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--vault-radius-md);
+    padding: 20px;
+    margin-top: 16px;
+    border: 1px solid var(--vault-border);
+}
+
+.message-detail h4 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0 0 8px;
+}
+
+.message-detail p {
+    color: var(--vault-muted);
+    line-height: 1.7;
+    margin: 0 0 12px;
+}
+
+.message-card.unread {
+    border-left: 3px solid var(--vault-primary) !important;
+}
+
+.manage-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.mb-4 { margin-bottom: 1.5rem !important; }
+
+@media (max-width: 991.98px) {
+    .manage-split {
+        grid-template-columns: 1fr;
+    }
+
+    .manage-toolbar {
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .manage-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .manage-form-grid .full {
+        grid-column: span 1;
+    }
+
+    .manage-table {
+        min-width: 560px;
+        font-size: 13px;
+    }
+
+    .manage-table th,
+    .manage-table td {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .manage-card {
+        padding: 16px 14px;
+        border-radius: var(--vault-radius-md);
+    }
+
+    .manage-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
