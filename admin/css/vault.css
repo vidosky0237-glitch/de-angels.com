@@ -136,7 +136,7 @@ body.vault-body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1555931665-5a90aa7d6c3e?auto=format&fit=crop&w=900&q=80') center / cover no-repeat;
+    background: url('../img/grill-night.png') center / cover no-repeat;
     opacity: 0.12;
 }
 

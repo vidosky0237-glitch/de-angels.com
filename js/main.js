@@ -206,6 +206,35 @@
             $("#video").attr('src', $videoSrc);
         })
     });
+
+
+    // Gallery filters
+    (function () {
+        var gallery = document.getElementById('gallery');
+        if (!gallery) {
+            return;
+        }
+
+        var filters = gallery.querySelectorAll('.gallery-filter');
+        var cells = gallery.querySelectorAll('.gallery-cell');
+
+        filters.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var category = btn.getAttribute('data-filter');
+
+                filters.forEach(function (item) {
+                    item.classList.remove('active');
+                });
+                btn.classList.add('active');
+
+                cells.forEach(function (cell) {
+                    var card = cell.querySelector('[data-gallery-cat]');
+                    var match = category === 'all' || (card && card.getAttribute('data-gallery-cat') === category);
+                    cell.classList.toggle('is-hidden', !match);
+                });
+            });
+        });
+    })();
     
 })(jQuery);
 

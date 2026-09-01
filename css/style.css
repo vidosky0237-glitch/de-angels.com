@@ -811,11 +811,308 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     opacity: 1;
 }
 
+
+/*** Classy gallery showcase ***/
+.gallery-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(680px, 90%);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 166, 81, 0.35), transparent);
+}
+
+.gallery-lead {
+    max-width: 620px;
+    margin-bottom: 2rem;
+    color: rgba(26, 20, 16, 0.62);
+    line-height: 1.75;
+    font-size: 1.05rem;
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2.75rem;
+}
+
+.gallery-filter {
+    border: 1px solid rgba(26, 20, 16, 0.1);
+    background: #fff;
+    color: var(--dark);
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .35s ease;
+    box-shadow: 0 4px 14px rgba(26, 20, 16, 0.04);
+}
+
+.gallery-filter:hover,
+.gallery-filter.active {
+    background: var(--dark);
+    border-color: var(--dark);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(26, 20, 16, 0.14);
+}
+
+.gallery-filter.active {
+    background: linear-gradient(135deg, var(--primary), #008743);
+    border-color: transparent;
+}
+
+.gallery-showcase {
+    position: relative;
+}
+
+.gallery-cell {
+    display: flex;
+    transition: opacity .4s ease, transform .4s ease;
+}
+
+.gallery-cell .gallery-card {
+    flex: 1;
+    width: 100%;
+}
+
+.gallery-cell.is-hidden {
+    display: none;
+}
+
+.gallery-card {
+    position: relative;
+    height: 252px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #141210;
+    box-shadow: 0 12px 36px rgba(26, 20, 16, 0.09);
+    transition: transform .45s ease, box-shadow .45s ease;
+}
+
+.gallery-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 44px rgba(26, 20, 16, 0.13);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    filter: contrast(1.04) saturate(1.06) brightness(0.98);
+    transition: transform .65s ease, filter .65s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.04);
+    filter: contrast(1.05) saturate(1.08) brightness(1.02);
+}
+
+/* Per-shot framing — keeps each venue photo centred without distortion */
+.gallery-frame--terrace-hero img {
+    filter: contrast(1.05) saturate(1.1) brightness(0.99);
+}
+
+.gallery-col-terrace > .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-col-terrace .gallery-card--hero {
+    min-height: 368px;
+    height: 368px;
+}
+
+.gallery-col-terrace .gallery-frame--terrace-day {
+    height: 144px;
+}
+
+.gallery-col-terrace .gallery-frame--terrace-day img {
+    object-position: center 24%;
+}
+
+.gallery-frame--night-neon img { object-position: center 32%; filter: contrast(1.06) saturate(1.12) brightness(0.96); }
+.gallery-frame--glass-lounge img { object-position: center 45%; }
+.gallery-frame--terrace-day img { object-position: center 26%; filter: contrast(1.05) saturate(1.1) brightness(1.01); }
+.gallery-frame--guitar img { object-position: center 42%; }
+.gallery-frame--terrace-night img { object-position: center 38%; }
+.gallery-frame--blue-velvet img { object-position: center 36%; }
+.gallery-frame--art-mural img { object-position: center 30%; }
+.gallery-frame--terrace-lounge img { object-position: center 35%; }
+.gallery-frame--black-booths img { object-position: center 40%; }
+.gallery-frame--mural-pillars img { object-position: center 28%; }
+.gallery-frame--brand-lighting img { object-position: center 30%; }
+
+.gallery-card--hero {
+    height: 100%;
+    min-height: 536px;
+    box-shadow: 0 20px 48px rgba(26, 20, 16, 0.12);
+}
+
+.gallery-col-terrace .gallery-frame--terrace-hero img {
+    object-position: center 42%;
+}
+
+.gallery-card--tall {
+    height: 100%;
+    min-height: 536px;
+}
+
+.gallery-card--night-feature {
+    height: auto;
+    min-height: 292px;
+    box-shadow: 0 20px 48px rgba(26, 20, 16, 0.12);
+}
+
+.gallery-row-featured-side .gallery-card:not(.gallery-card--night-feature) {
+    height: 216px;
+}
+
+.gallery-card--wide {
+    height: 268px;
+}
+
+.gallery-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    padding: 20px 22px;
+    background: linear-gradient(to top, rgba(10, 8, 6, 0.9) 0%, rgba(10, 8, 6, 0.38) 58%, transparent 100%);
+    color: #fff;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.gallery-caption--always,
+.gallery-card:hover .gallery-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-caption span {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--gold);
+}
+
+.gallery-caption h6 {
+    margin: 5px 0 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 1.35;
+}
+
+.gallery-row-featured > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-row-featured-side > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .gallery-row-featured-side,
+    .gallery-col-terrace > .row {
+        min-height: 536px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .gallery-col-terrace .gallery-card--hero {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .gallery-col-terrace .gallery-frame--terrace-day {
+        height: 240px;
+    }
+
+    .gallery-card--hero,
+    .gallery-card--tall {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .gallery-card--night-feature {
+        min-height: 260px;
+        height: 260px;
+    }
+
+    .gallery-row-featured-side .gallery-card:not(.gallery-card--night-feature) {
+        height: 240px;
+    }
+
+    .gallery-card--wide {
+        height: 260px;
+    }
+}
+
 @media (max-width: 767.98px) {
     .gallery-item,
     .gallery-item.tall {
         height: 220px;
         min-height: 220px;
+    }
+
+    .gallery-lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .gallery-filters {
+        margin-bottom: 2rem;
+    }
+
+    .gallery-card,
+    .gallery-card--hero,
+    .gallery-card--tall,
+    .gallery-card--night-feature,
+    .gallery-card--wide {
+        height: 240px;
+        min-height: 240px;
+    }
+
+    .gallery-caption {
+        opacity: 1;
+        transform: none;
+        padding: 16px 18px;
+    }
+
+    .gallery-caption h6 {
+        font-size: 0.95rem;
     }
 }
 
@@ -848,7 +1145,7 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     min-height: 500px;
     background:
         linear-gradient(rgba(15, 23, 43, .15), rgba(15, 23, 43, .25)),
-        url('https://images.unsplash.com/photo-1555931665-5a90aa7d6c3e?auto=format&fit=crop&w=1200&q=80');
+        url('../img/video.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1014,6 +1311,18 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 
 .about-img-terrace {
     object-position: center top;
+}
+
+.about-img-exterior {
+    object-position: center 40%;
+    filter: contrast(1.05) saturate(1.08) brightness(0.98);
+}
+
+.content-photo {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: var(--img-radius);
 }
 
 
@@ -1231,7 +1540,7 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 .cta-banner {
     background:
         linear-gradient(rgba(26, 20, 16, .78), rgba(26, 20, 16, .84)),
-        url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+        url('../img/outdoor-terrace-about.png') center / cover no-repeat;
     border-radius: 24px;
     padding: 72px 40px;
     text-align: center;
@@ -1241,7 +1550,7 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 .cta-banner.grill {
     background:
         linear-gradient(rgba(26, 20, 16, .76), rgba(26, 20, 16, .84)),
-        url('https://images.unsplash.com/photo-1555931665-5a90aa7d6c3e?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+        url('../img/grill-night.png') center / cover no-repeat;
 }
 
 
