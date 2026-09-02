@@ -17,6 +17,11 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 .ff-secondary {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -2167,9 +2172,16 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 /*** Home page responsive ***/
 .page-home {
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 .page-home img {
+    max-width: 100%;
+}
+
+.page-home .container-fluid,
+.page-home .container,
+.page-home .row {
     max-width: 100%;
 }
 
@@ -2202,6 +2214,7 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
         max-width: 360px;
         width: 100%;
         height: auto;
+        animation: imgRotate 50s linear infinite;
     }
 
     .page-home .about-img.tall {
@@ -2297,10 +2310,6 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
         line-height: 1.2;
     }
 
-    .page-home .hero-home .display-3 br {
-        display: none;
-    }
-
     .page-home .hero-tagline {
         font-size: 0.98rem;
         line-height: 1.7;
@@ -2320,13 +2329,14 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     }
 
     .page-home .hero-grill-wrap {
-        overflow: hidden;
         margin-top: 0.5rem;
     }
 
     .page-home .hero-grill {
-        max-width: 240px;
-        animation: none;
+        max-width: 260px;
+        width: 100%;
+        height: auto;
+        animation: imgRotate 50s linear infinite;
     }
 
     .page-home .about-collage {
@@ -2352,10 +2362,16 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
         margin-bottom: 1.75rem !important;
     }
 
+    .page-home .tab-class {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
     .page-home .tab-class .nav-pills {
         justify-content: flex-start !important;
         flex-wrap: nowrap !important;
         overflow-x: auto;
+        max-width: 100%;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         padding-bottom: 0.35rem;
@@ -2483,11 +2499,22 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     .page-home .gallery-filters {
         gap: 8px;
         margin-bottom: 1.75rem;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        justify-content: flex-start;
+        padding-bottom: 2px;
+    }
+
+    .page-home .gallery-filters::-webkit-scrollbar {
+        display: none;
     }
 
     .page-home .gallery-filter {
         padding: 8px 14px;
         font-size: 11px;
+        flex-shrink: 0;
     }
 
     .page-home .gallery-lead {
@@ -2596,7 +2623,10 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     }
 
     .page-home .hero-grill {
-        max-width: 200px;
+        max-width: 220px;
+        width: 100%;
+        height: auto;
+        animation: imgRotate 50s linear infinite;
     }
 
     .page-home .navbar-dark .btn-accent {
