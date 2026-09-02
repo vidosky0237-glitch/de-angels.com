@@ -2165,7 +2165,20 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 
 
 /*** Home page responsive ***/
+.page-home {
+    overflow-x: hidden;
+}
+
+.page-home img {
+    max-width: 100%;
+}
+
 @media (max-width: 991.98px) {
+    .page-home .navbar.navbar-dark {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
     .page-home .hero-home {
         min-height: auto;
         padding-top: 0.5rem;
@@ -2182,10 +2195,13 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     .page-home .hero-home .display-3 {
         font-size: calc(1.55rem + 1.75vw);
         line-height: 1.15;
+        word-wrap: break-word;
     }
 
     .page-home .hero-grill {
         max-width: 360px;
+        width: 100%;
+        height: auto;
     }
 
     .page-home .about-img.tall {
@@ -2198,6 +2214,7 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 
     .page-home .video {
         min-height: 320px;
+        height: 320px;
     }
 
     .page-home #reserve .p-5 {
@@ -2206,6 +2223,46 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 
     .page-home .outdoor-panel .stat-box h3 {
         font-size: 1.25rem;
+    }
+
+    .page-home .spotlight-panel img {
+        min-height: 280px;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    .page-home .service-card,
+    .page-home .daypart-card,
+    .page-home .dish-card {
+        height: 100%;
+    }
+
+    .page-home .gallery-col-terrace .gallery-card--hero {
+        min-height: 320px;
+        height: 320px;
+    }
+
+    .page-home .gallery-col-terrace .gallery-frame--terrace-day {
+        height: 220px;
+    }
+
+    .page-home .gallery-card--night-feature {
+        min-height: 240px;
+        height: 240px;
+    }
+
+    .page-home .gallery-row-featured-side .gallery-card:not(.gallery-card--night-feature) {
+        height: 220px;
+    }
+
+    .page-home .grill-takeout-panel .takeout-visual {
+        min-height: 240px;
+    }
+
+    .page-home .grill-takeout-panel .takeout-visual img {
+        max-width: 260px;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -2216,17 +2273,40 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     }
 
     .page-home .container-fluid.py-5 {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.75rem !important;
+    }
+
+    .page-home .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .page-home .row.g-5 {
+        --bs-gutter-x: 1.25rem;
+        --bs-gutter-y: 1.25rem;
+    }
+
+    .page-home .hero-home {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .page-home .hero-home .display-3 {
-        font-size: 2rem;
+        font-size: 1.9rem;
+        line-height: 1.2;
+    }
+
+    .page-home .hero-home .display-3 br {
+        display: none;
     }
 
     .page-home .hero-tagline {
-        font-size: 1rem;
+        font-size: 0.98rem;
+        line-height: 1.7;
         max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .page-home .hero-kicker {
@@ -2241,15 +2321,35 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
 
     .page-home .hero-grill-wrap {
         overflow: hidden;
+        margin-top: 0.5rem;
     }
 
     .page-home .hero-grill {
-        max-width: 260px;
+        max-width: 240px;
         animation: none;
     }
 
+    .page-home .about-collage {
+        margin-bottom: 0.5rem;
+    }
+
     .page-home .about-img.tall {
-        height: 220px;
+        height: 200px;
+    }
+
+    .page-home .about-img-exterior {
+        object-position: center 35%;
+    }
+
+    .page-home h1,
+    .page-home .display-5 {
+        font-size: clamp(1.55rem, 6vw, 2rem);
+        line-height: 1.25;
+        word-wrap: break-word;
+    }
+
+    .page-home h1.mb-5 {
+        margin-bottom: 1.75rem !important;
     }
 
     .page-home .tab-class .nav-pills {
@@ -2259,7 +2359,8 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         padding-bottom: 0.35rem;
-        margin-bottom: 2rem !important;
+        margin-bottom: 1.75rem !important;
+        gap: 0;
     }
 
     .page-home .tab-class .nav-pills::-webkit-scrollbar {
@@ -2271,23 +2372,30 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     }
 
     .page-home .tab-class .nav-pills .menu-tab {
-        margin-left: 0.5rem !important;
-        margin-right: 0.5rem !important;
+        margin-left: 0.4rem !important;
+        margin-right: 0.4rem !important;
+        white-space: nowrap;
     }
 
     .page-home .tab-class .nav-pills .menu-tab i {
-        font-size: 1.35rem !important;
+        font-size: 1.25rem !important;
+    }
+
+    .page-home .menu-item-card {
+        padding: 14px;
     }
 
     .page-home .menu-item-card h5 {
         flex-wrap: wrap;
         gap: 4px 10px;
         font-size: 1rem;
+        align-items: flex-start;
     }
 
     .page-home .menu-item-card h5 span:first-child {
-        flex: 1 1 140px;
+        flex: 1 1 120px;
         min-width: 0;
+        word-break: break-word;
     }
 
     .page-home .menu-item-card h5 span:last-child {
@@ -2296,40 +2404,141 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     }
 
     .page-home .menu-item-card .ps-4 {
-        padding-left: 0.85rem !important;
+        padding-left: 0.75rem !important;
     }
 
     .page-home .menu-item-card .menu-thumb {
-        width: 76px;
-        height: 76px;
+        width: 72px;
+        height: 72px;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .page-home .spotlight-panel .p-4,
+    .page-home .spotlight-panel .p-lg-5 {
+        padding: 1.35rem !important;
+    }
+
+    .page-home .spotlight-panel img {
+        min-height: 220px;
+        height: 220px;
     }
 
     .page-home .dish-card img {
-        height: 200px;
+        height: 190px;
+        object-fit: cover;
+        width: 100%;
     }
 
-    .page-home .review-card {
-        padding: 24px 20px;
+    .page-home .drink-card {
+        height: 210px;
+    }
+
+    .page-home .drink-overlay {
+        padding: 1rem;
+    }
+
+    .page-home .outdoor-panel {
+        min-height: 280px;
     }
 
     .page-home .outdoor-panel .stat-box {
-        padding: 12px 8px;
+        padding: 10px 6px;
     }
 
     .page-home .outdoor-panel .stat-box h3 {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .page-home .outdoor-panel .stat-box small {
         font-size: 10px;
+        line-height: 1.25;
+        display: block;
     }
 
-    .page-home h1.mb-5 {
-        margin-bottom: 2rem !important;
+    .page-home .outdoor-panel-badge {
+        font-size: 11px;
+        padding: 6px 12px;
     }
 
-    .page-home .display-5 {
-        font-size: 2rem;
+    .page-home .btn.py-3.px-5 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .page-home .daypart-card img {
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .page-home .daypart-card .p-4 {
+        padding: 1.15rem !important;
+    }
+
+    .page-home .service-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .page-home .gallery-filters {
+        gap: 8px;
+        margin-bottom: 1.75rem;
+    }
+
+    .page-home .gallery-filter {
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+
+    .page-home .gallery-lead {
+        font-size: 0.98rem;
+        padding: 0 4px;
+    }
+
+    .page-home .gallery-col-terrace .gallery-card--hero,
+    .page-home .gallery-col-terrace .gallery-frame--terrace-day,
+    .page-home .gallery-card,
+    .page-home .gallery-card--hero,
+    .page-home .gallery-card--tall,
+    .page-home .gallery-card--night-feature,
+    .page-home .gallery-card--wide,
+    .page-home .gallery-row-featured-side .gallery-card:not(.gallery-card--night-feature) {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .page-home .gallery-caption {
+        opacity: 1;
+        transform: none;
+        padding: 14px 16px;
+    }
+
+    .page-home .gallery-caption h6 {
+        font-size: 0.9rem;
+    }
+
+    .page-home .review-card {
+        padding: 22px 18px;
+    }
+
+    .page-home #reserve .rounded {
+        border-radius: 16px !important;
+    }
+
+    .page-home .video {
+        min-height: 240px;
+        height: 240px;
+    }
+
+    .page-home .contact-chip {
+        padding: 20px 18px;
+        height: 100%;
+    }
+
+    .page-home .footer .btn-link {
+        display: block;
+        margin-left: 0;
+        text-align: left;
     }
 
     .page-home .footer .footer-menu a {
@@ -2339,21 +2548,55 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
         padding-right: 0;
         margin-right: 14px;
     }
+
+    .page-home .footer-logo {
+        max-width: 140px;
+        height: auto;
+    }
+
+    .page-home .copyright {
+        text-align: center;
+    }
+
+    .page-home .grill-takeout-panel .p-4,
+    .page-home .grill-takeout-panel .p-lg-5 {
+        padding: 1.25rem !important;
+    }
+
+    .page-home .takeout-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+    }
+
+    .page-home .takeout-items span {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 575.98px) {
+    .page-home .navbar.navbar-dark {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+
+    .page-home .navbar-brand img {
+        max-height: 42px;
+    }
+
     .page-home .hero-home .display-3 {
-        font-size: 1.75rem;
+        font-size: 1.65rem;
     }
 
     .page-home .hero-home .btn {
         display: block;
         width: 100%;
         margin-right: 0 !important;
+        margin-left: 0 !important;
     }
 
     .page-home .hero-grill {
-        max-width: 220px;
+        max-width: 200px;
     }
 
     .page-home .navbar-dark .btn-accent {
@@ -2363,24 +2606,34 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
         margin-top: 0.5rem;
     }
 
+    .page-home .about-img.tall {
+        height: 170px;
+    }
+
     .page-home .video {
-        min-height: 240px;
+        min-height: 210px;
+        height: 210px;
     }
 
     .page-home #reserve .p-5 {
-        padding: 1.35rem !important;
+        padding: 1.25rem !important;
     }
 
     .page-home #reserve h1.text-white {
-        font-size: 1.65rem;
+        font-size: 1.5rem;
+    }
+
+    .page-home .form-floating > .form-control,
+    .page-home .form-floating > .form-select {
+        font-size: 16px;
     }
 
     .page-home .contact-chip {
-        padding: 18px;
+        padding: 16px;
     }
 
     .page-home .daypart-card img {
-        height: 160px;
+        height: 150px;
     }
 
     .page-home .menu-item-card {
@@ -2388,17 +2641,56 @@ h1, h2, h3, .display-3, .display-4, .display-5 {
     }
 
     .page-home .menu-item-card .menu-thumb {
-        width: 68px;
-        height: 68px;
+        width: 64px;
+        height: 64px;
     }
 
     .page-home .menu-item-card h5 {
-        font-size: 0.95rem;
+        font-size: 0.92rem;
     }
 
+    .page-home .drink-card {
+        height: 190px;
+    }
+
+    .page-home .gallery-card,
+    .page-home .gallery-card--hero,
+    .page-home .gallery-card--tall,
+    .page-home .gallery-card--night-feature,
+    .page-home .gallery-card--wide,
+    .page-home .gallery-col-terrace .gallery-card--hero,
+    .page-home .gallery-col-terrace .gallery-frame--terrace-day,
+    .page-home .gallery-row-featured-side .gallery-card:not(.gallery-card--night-feature) {
+        height: 200px;
+        min-height: 200px;
+        border-radius: 14px;
+    }
+
+    .page-home #outdoor .btn,
+    .page-home #about .btn,
+    .page-home #menu .btn,
     .page-home #contact .btn {
         display: block;
         width: 100%;
         margin-right: 0 !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    .page-home .outdoor-panel-content {
+        padding: 1rem !important;
+    }
+
+    .page-home .grill-takeout-panel h3 {
+        font-size: 1.25rem;
+    }
+
+    .page-home .grill-takeout-panel .takeout-visual {
+        min-height: 200px;
+        padding: 16px;
+    }
+
+    .page-home .grill-takeout-panel .takeout-visual img {
+        max-width: 180px;
     }
 }
