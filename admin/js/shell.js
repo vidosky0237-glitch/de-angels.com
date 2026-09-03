@@ -122,7 +122,7 @@
         if (logoutBtn) {
             logoutBtn.addEventListener('click', function () {
                 VaultAuth.clearSession();
-                window.location.href = 'login.html';
+                window.location.href = 'admin-login.html';
             });
         }
 

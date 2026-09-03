@@ -93,7 +93,7 @@
                 inboxList.innerHTML = '<div class="empty-state"><i class="fa fa-inbox d-block"></i>No messages yet</div>';
             } else {
                 inboxList.innerHTML = msgs.map(function (m) {
-                    return '<a href="messages.html" class="inbox-item' + (m.read ? '' : ' unread') + '" style="text-decoration:none;color:inherit;display:flex;">' +
+                    return '<a href="message-inbox.html" class="inbox-item' + (m.read ? '' : ' unread') + '" style="text-decoration:none;color:inherit;display:flex;">' +
                         '<span class="inbox-dot"></span><div class="inbox-body"><strong>' + esc(m.name) + '</strong>' +
                         '<p>' + esc(m.body.substring(0, 60)) + (m.body.length > 60 ? '…' : '') + '</p>' +
                         '<time>' + VaultStore.timeAgo(m.createdAt) + '</time></div>' +

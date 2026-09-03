@@ -36,7 +36,7 @@
 
     function requireAuth() {
         if (!isAuthenticated()) {
-            window.location.href = 'login.html';
+            window.location.href = 'admin-login.html';
             return false;
         }
         return true;

@@ -47,7 +47,7 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="menu.html" class="nav-item nav-link">Menu</a>
                         <a href="team.html" class="nav-item nav-link">Services</a>
-                        <a href="booking.html" class="nav-item nav-link">Reservations</a>
+                        <a href="reservations.html" class="nav-item nav-link">Reservations</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="menu.html" class="btn btn-accent py-2 px-4">Order Now</a>
@@ -55,12 +55,20 @@
             </nav>
 
             <div class="container-fluid py-5 hero-header hero-home mb-0">
-                <div class="container my-5 py-5">
+                <div class="hero-slides" aria-hidden="true">
+                    <div class="hero-slide is-active" style="background-image: url('img/hero/hero-night-neon.jpg');" data-kicker="Night Life · Terrace Glow" data-tagline="Neon nights, open sky and tables waiting under the De Angels glow."></div>
+                    <div class="hero-slide" style="background-image: url('img/hero/hero-day-exterior.jpg');" data-kicker="Arrival · Daytime Welcome" data-tagline="Arrive in style — iconic guitar sign, gold accents and New Owerri hospitality."></div>
+                    <div class="hero-slide" style="background-image: url('img/hero/hero-day-terrace.jpg');" data-kicker="Open Air · Day Terrace" data-tagline="Golden stairs, green lawn and terrace seating made for long afternoons."></div>
+                    <div class="hero-slide" style="background-image: url('img/hero/hero-glass-lounge.jpg');" data-kicker="VIP Lounge · After Dark" data-tagline="Blue velvet, gold glass and evenings that feel exclusive."></div>
+                </div>
+                <div class="hero-home-overlay" aria-hidden="true"></div>
+
+                <div class="container my-5 py-5 hero-home-content">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <span class="hero-kicker wow fadeInUp">Bar • Grills • Outdoor Living</span>
+                            <span class="hero-kicker wow fadeInUp" id="heroSlideKicker">Night Life · Terrace Glow</span>
                             <h1 class="display-3 text-white animated slideInLeft mb-3">Premium Meals. Great Grills.<br>Amazing Moments.</h1>
-                            <p class="hero-tagline animated slideInLeft mb-4">Welcome to De Angels Bar & Grills — a stylish destination for smoky barbecues, signature grills, refreshing drinks and relaxed outdoor dining. Come hungry. Leave glowing.</p>
+                            <p class="hero-tagline animated slideInLeft mb-4" id="heroSlideTagline">Neon nights, open sky and tables waiting under the De Angels glow.</p>
                             <p class="hero-points animated slideInLeft mb-4">Meals <span>•</span> Grills <span>•</span> Moments</p>
                             <a href="menu.html" class="btn btn-accent py-sm-3 px-sm-5 me-3 mb-2 animated slideInLeft">Order Now</a>
                             <a href="#menu" class="btn btn-primary py-sm-3 px-sm-5 mb-2 animated slideInLeft">Explore Menu</a>
@@ -69,6 +77,13 @@
                             <img class="hero-grill" src="img/hero.png" alt="Signature charcoal grills at De Angels Bar & Grills">
                         </div>
                     </div>
+                </div>
+
+                <div class="hero-slide-controls" aria-label="Hero slideshow">
+                    <button type="button" class="hero-slide-dot is-active" data-slide="0" aria-label="Show night terrace slide"></button>
+                    <button type="button" class="hero-slide-dot" data-slide="1" aria-label="Show daytime exterior slide"></button>
+                    <button type="button" class="hero-slide-dot" data-slide="2" aria-label="Show day terrace slide"></button>
+                    <button type="button" class="hero-slide-dot" data-slide="3" aria-label="Show glass lounge slide"></button>
                 </div>
             </div>
         </div>
@@ -672,7 +687,7 @@
                                 <p class="mb-2 small">Thick okra stew loaded with fresh fish, prawns and seafood in a rich, peppery broth.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="booking.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -685,7 +700,7 @@
                                 <p class="mb-2 small">Ground melon seed stew with leafy greens, tender protein and rich West African flavour.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="booking.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -698,7 +713,7 @@
                                 <p class="mb-2 small">Hearty native-style soup with assorted meat, leafy greens and rich palm-oil broth.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="booking.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -711,7 +726,7 @@
                                 <p class="mb-2 small">Rich afang leaves, tender protein and deep Calabar-style flavour in every bowl.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="booking.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -783,7 +798,7 @@
                             <div class="col-sm-6"><i class="fa fa-check text-primary me-2"></i>Family-friendly weekends</div>
                             <div class="col-sm-6"><i class="fa fa-check text-primary me-2"></i>Private outdoor corners</div>
                         </div>
-                        <a href="booking.html" class="btn btn-primary py-3 px-5">Reserve Outdoor Seating</a>
+                        <a href="reservations.html" class="btn btn-primary py-3 px-5">Reserve Outdoor Seating</a>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="outdoor-panel">
@@ -974,21 +989,12 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="col-md-6 gallery-cell wow fadeInUp" data-wow-delay="0.25s">
+                                <div class="col-12 gallery-cell wow fadeInUp" data-wow-delay="0.25s">
                                     <article class="gallery-card gallery-frame--glass-lounge" data-gallery-cat="lounge">
                                         <img src="img/gallery/gallery-glass-lounge-night.jpg" alt="Glass lounge with blue velvet seating and gold trim at De Angels" loading="lazy" decoding="async">
                                         <div class="gallery-caption">
                                             <span>VIP Lounge</span>
                                             <h6>Glass enclosure &amp; velvet seating</h6>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-md-6 gallery-cell wow fadeInUp" data-wow-delay="0.3s">
-                                    <article class="gallery-card gallery-frame--terrace-night" data-gallery-cat="terrace">
-                                        <img src="img/gallery/gallery-terrace-night-turf.jpg" alt="Outdoor terrace at night with green turf and woven chairs" loading="lazy" decoding="async">
-                                        <div class="gallery-caption">
-                                            <span>Under The Stars</span>
-                                            <h6>Terrace nights on the lawn</h6>
                                         </div>
                                     </article>
                                 </div>
@@ -1047,26 +1053,6 @@
                         </div>
                     </div>
 
-                    <div class="row g-4 gallery-row-more mt-1">
-                        <div class="col-lg-4 col-md-6 gallery-cell wow fadeInUp" data-wow-delay="0.1s">
-                            <article class="gallery-card gallery-frame--mural-pillars" data-gallery-cat="lounge">
-                                <img src="img/gallery/gallery-lounge-mural-pillars.jpg" alt="Decorated pillars and mural lounge at De Angels" loading="lazy" decoding="async">
-                                <div class="gallery-caption">
-                                    <span>Design</span>
-                                    <h6>Decorated pillars &amp; murals</h6>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-lg-4 col-md-6 gallery-cell wow fadeInUp" data-wow-delay="0.2s">
-                            <article class="gallery-card gallery-frame--brand-lighting" data-gallery-cat="lounge">
-                                <img src="img/gallery/gallery-lounge-brand-lighting.jpg" alt="Brand-lit lounge with green and red ceiling accents at De Angels" loading="lazy" decoding="async">
-                                <div class="gallery-caption">
-                                    <span>Brand Glow</span>
-                                    <h6>Green &amp; red house lighting</h6>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1258,8 +1244,9 @@
                         <a class="btn btn-link" href="about.html">About Us</a>
                         <a class="btn btn-link" href="menu.html">Our Menu</a>
                         <a class="btn btn-link" href="team.html">Services</a>
-                        <a class="btn btn-link" href="booking.html">Reservations</a>
+                        <a class="btn btn-link" href="reservations.html">Reservations</a>
                         <a class="btn btn-link" href="contact.html">Contact</a>
+                        <a class="btn btn-link" href="admin/admin-dashboard.html">Admin Dashboard</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
@@ -1288,8 +1275,9 @@
                             <div class="footer-menu">
                                 <a href="index.html">Home</a>
                                 <a href="menu.html">Menu</a>
-                                <a href="booking.html">Book</a>
+                                <a href="reservations.html">Book</a>
                                 <a href="contact.html">Contact</a>
+                                <a href="admin/admin-dashboard.html">Admin</a>
                             </div>
                         </div>
                     </div>
