@@ -29,17 +29,17 @@
             </div>
             <nav class="vault-nav">
                 <span class="vault-nav-label">Operations</span>
-                <a href="dashboard.html" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Overview</span></a>
-                <a href="reservations.html" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
-                <a href="message-inbox.html" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Message Inbox</span></a>
+                <a href="dashboard.php" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Overview</span></a>
+                <a href="reservations.php" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
+                <a href="message-inbox.php" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Message Inbox</span></a>
                 <span class="vault-nav-label">Hospitality</span>
-                <a href="menu-vault.html" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu Vault</span></a>
-                <a href="events.html" data-nav="events"><i class="fa fa-glass-cheers"></i><span>Events</span></a>
-                <a href="portfolio.html" data-nav="portfolio"><i class="fa fa-images"></i><span>Portfolio</span></a>
+                <a href="menu-vault.php" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu Vault</span></a>
+                <a href="events.php" data-nav="events"><i class="fa fa-glass-cheers"></i><span>Events</span></a>
+                <a href="portfolio.php" data-nav="portfolio"><i class="fa fa-images"></i><span>Portfolio</span></a>
                 <span class="vault-nav-label">System</span>
-                <a href="admin-settings.html" data-nav="admin-settings"><i class="fa fa-cog"></i><span>Admin Settings</span></a>
-                <a href="admin-dashboard.html"><i class="fa fa-th-large"></i><span>Admin Dashboard</span></a>
-                <a href="../index.html" target="_blank" rel="noopener"><i class="fa fa-globe"></i><span>View Website</span></a>
+                <a href="admin-settings.php" data-nav="admin-settings"><i class="fa fa-cog"></i><span>Admin Settings</span></a>
+                <a href="admin-dashboard.php"><i class="fa fa-th-large"></i><span>Admin Dashboard</span></a>
+                <a href="../index.php" target="_blank" rel="noopener"><i class="fa fa-globe"></i><span>View Website</span></a>
             </nav>
             <div class="vault-sidebar-foot">
                 <button type="button" class="vault-logout" id="vaultLogout"><i class="fa fa-sign-out-alt"></i> Sign Out</button>
@@ -64,27 +64,21 @@
             <main class="vault-content">
                 <div class="manage-toolbar">
                     <h2>Showcase Gallery</h2>
-                    <a href="dashboard.html" class="deck-card-link"><i class="fa fa-arrow-left"></i> Back to deck</a>
+                    <a href="dashboard.php" class="deck-card-link"><i class="fa fa-arrow-left"></i> Back to deck</a>
                 </div>
 
-                <div class="portfolio-stats">
-                    <div class="portfolio-stat">
-                        <strong id="portfolioTotal">0</strong>
-                        <span>Total Moments</span>
-                    </div>
-                    <div class="portfolio-stat">
-                        <strong id="portfolioFeatured">0</strong>
-                        <span>Featured</span>
-                    </div>
-                    <div class="portfolio-stat">
-                        <strong id="portfolioCategories">0</strong>
-                        <span>Categories</span>
-                    </div>
-                </div>
+                <div id="portfolioAlert" class="vault-alert" role="status" style="display:none"></div>
+
+                <section class="res-kpi-strip" aria-label="Portfolio snapshot">
+                    <button type="button" class="res-kpi" data-pf-filter="all"><span>Total moments</span><strong id="portfolioTotal">—</strong></button>
+                    <button type="button" class="res-kpi" data-pf-filter="featured"><span>Featured</span><strong id="portfolioFeatured">—</strong></button>
+                    <button type="button" class="res-kpi" data-pf-filter="published"><span>On website</span><strong id="portfolioPublished">—</strong></button>
+                    <article class="res-kpi"><span>Categories</span><strong id="portfolioCategories">—</strong></article>
+                </section>
 
                 <div class="manage-card mb-4">
-                    <h3 style="font-family:Oswald;margin:0 0 16px;font-size:1.05rem">Add Showcase Moment</h3>
-                    <p style="color:var(--vault-muted);margin:0 0 18px;font-size:13px;line-height:1.6">Capture terrace events, catering highlights and brand nights. Featured items can be surfaced on the public website.</p>
+                    <h3 id="portfolioFormTitle" style="font-family:Oswald;margin:0 0 16px;font-size:1.05rem">Add Showcase Moment</h3>
+                    <p style="color:var(--vault-muted);margin:0 0 18px;font-size:13px;line-height:1.6">Published moments appear in the homepage gallery. Featured items sit first. Image path can be <em>img/photo.png</em> or a full URL.</p>
                     <form id="addPortfolioForm">
                         <div class="manage-form-grid">
                             <div class="manage-field"><label for="pTitle">Title</label><input type="text" id="pTitle" required placeholder="Birthday terrace takeover"></div>
@@ -98,31 +92,49 @@
                                     <option>Night Life</option>
                                 </select>
                             </div>
-                            <div class="manage-field full"><label for="pImage">Image URL</label><input type="text" id="pImage" placeholder="img/your-photo.png or https://…"></div>
+                            <div class="manage-field full"><label for="pImage">Image path or URL</label><input type="text" id="pImage" placeholder="img/your-photo.png"></div>
                             <div class="manage-field"><label for="pDate">Event Date</label><input type="date" id="pDate"></div>
                             <div class="manage-field"><label for="pGuests">Guest Count</label><input type="number" id="pGuests" min="0" value="0" placeholder="Optional"></div>
                             <div class="manage-field full"><label for="pDesc">Description</label><textarea id="pDesc" rows="2" placeholder="What made this moment special…"></textarea></div>
-                            <div class="manage-field full">
+                            <div class="manage-field">
                                 <label class="vault-check" style="margin:0">
-                                    <input type="checkbox" id="pFeatured">
-                                    <span>Feature this on the website homepage</span>
+                                    <input type="checkbox" id="pPublished" checked>
+                                    <span>Show on the public website</span>
                                 </label>
                             </div>
-                            <div class="manage-field full"><button type="submit" class="vault-btn" style="width:auto;padding:12px 28px;max-width:100%">Add to Portfolio</button></div>
+                            <div class="manage-field">
+                                <label class="vault-check" style="margin:0">
+                                    <input type="checkbox" id="pFeatured">
+                                    <span>Feature at the top of the gallery</span>
+                                </label>
+                            </div>
+                            <div class="manage-field full">
+                                <button type="submit" class="vault-btn" id="portfolioSubmitBtn" style="width:auto;padding:12px 28px;max-width:100%">Add to Portfolio</button>
+                                <button type="button" class="manage-btn" id="portfolioCancelEdit" hidden style="margin-left:8px">Cancel edit</button>
+                            </div>
                         </div>
                     </form>
                 </div>
 
-                <div class="portfolio-filters" id="portfolioFilters"></div>
-                <div class="portfolio-grid" id="portfolioGrid"></div>
+                <div id="eventImport" class="manage-card mb-4" hidden></div>
+
+                <div class="manage-card">
+                    <div class="res-table-tools">
+                        <div class="portfolio-filters" id="portfolioFilters"></div>
+                        <label class="res-search">
+                            <input type="search" id="portfolioSearch" placeholder="Search title, category…" aria-label="Search portfolio">
+                        </label>
+                    </div>
+                    <div class="portfolio-grid" id="portfolioGrid"></div>
+                </div>
             </main>
         </div>
     </div>
     <nav class="vault-mobile-dock" aria-label="Quick navigation">
-        <a href="dashboard.html" class="dock-item" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Deck</span></a>
-        <a href="reservations.html" class="dock-item" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Bookings</span></a>
-        <a href="message-inbox.html" class="dock-item" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Inbox</span></a>
-        <a href="portfolio.html" class="dock-item active" data-nav="portfolio"><i class="fa fa-images"></i><span>Gallery</span></a>
+        <a href="dashboard.php" class="dock-item" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Deck</span></a>
+        <a href="reservations.php" class="dock-item" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Bookings</span></a>
+        <a href="message-inbox.php" class="dock-item" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Inbox</span></a>
+        <a href="portfolio.php" class="dock-item active" data-nav="portfolio"><i class="fa fa-images"></i><span>Gallery</span></a>
         <button type="button" class="dock-item" id="dockMenuBtn" aria-label="More options"><i class="fa fa-ellipsis-h"></i><span>More</span></button>
     </nav>
     <script src="js/auth.js"></script>

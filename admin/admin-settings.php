@@ -28,17 +28,17 @@
             </div>
             <nav class="vault-nav">
                 <span class="vault-nav-label">Operations</span>
-                <a href="dashboard.html" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Overview</span></a>
-                <a href="reservations.html" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
-                <a href="message-inbox.html" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Message Inbox</span></a>
+                <a href="dashboard.php" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Overview</span></a>
+                <a href="reservations.php" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
+                <a href="message-inbox.php" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Message Inbox</span></a>
                 <span class="vault-nav-label">Hospitality</span>
-                <a href="menu-vault.html" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu Vault</span></a>
-                <a href="events.html" data-nav="events"><i class="fa fa-glass-cheers"></i><span>Events</span></a>
-                <a href="portfolio.html" data-nav="portfolio"><i class="fa fa-images"></i><span>Portfolio</span></a>
+                <a href="menu-vault.php" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu Vault</span></a>
+                <a href="events.php" data-nav="events"><i class="fa fa-glass-cheers"></i><span>Events</span></a>
+                <a href="portfolio.php" data-nav="portfolio"><i class="fa fa-images"></i><span>Portfolio</span></a>
                 <span class="vault-nav-label">System</span>
-                <a href="admin-settings.html" data-nav="admin-settings"><i class="fa fa-cog"></i><span>Admin Settings</span></a>
-                <a href="admin-dashboard.html"><i class="fa fa-th-large"></i><span>Admin Dashboard</span></a>
-                <a href="../index.html" target="_blank" rel="noopener"><i class="fa fa-globe"></i><span>View Website</span></a>
+                <a href="admin-settings.php" data-nav="admin-settings"><i class="fa fa-cog"></i><span>Admin Settings</span></a>
+                <a href="admin-dashboard.php"><i class="fa fa-th-large"></i><span>Admin Dashboard</span></a>
+                <a href="../index.php" target="_blank" rel="noopener"><i class="fa fa-globe"></i><span>View Website</span></a>
             </nav>
             <div class="vault-sidebar-foot">
                 <button type="button" class="vault-logout" id="vaultLogout"><i class="fa fa-sign-out-alt"></i> Sign Out</button>
@@ -63,42 +63,80 @@
             <main class="vault-content">
                 <div class="manage-toolbar">
                     <h2>House Preferences</h2>
-                    <a href="dashboard.html" class="deck-card-link"><i class="fa fa-arrow-left"></i> Back to deck</a>
+                    <a href="../index.php" class="deck-card-link" target="_blank" rel="noopener"><i class="fa fa-globe"></i> View website</a>
                 </div>
 
                 <div id="settingsAlert" class="vault-alert" role="status" style="display:none"></div>
 
+                <section class="res-kpi-strip" aria-label="Public profile snapshot">
+                    <article class="res-kpi"><span>House name</span><strong id="settingsKpiName">—</strong></article>
+                    <article class="res-kpi"><span>Public email</span><strong id="settingsKpiEmail">—</strong></article>
+                    <article class="res-kpi"><span>Opening hours</span><strong id="settingsKpiHours">—</strong></article>
+                    <article class="res-kpi"><span>Deck alerts</span><strong id="settingsKpiAlerts">—</strong></article>
+                </section>
+
                 <div class="manage-card mb-4">
-                    <h3 style="font-family:Oswald;margin:0 0 16px;font-size:1.05rem">Venue Profile</h3>
+                    <h3 style="font-family:Oswald;margin:0 0 8px;font-size:1.05rem">Venue Profile</h3>
+                    <p style="color:var(--vault-muted);margin:0 0 18px;font-size:13px;line-height:1.6">These fields write through to the public site: footers, contact page, map, and social links.</p>
                     <form id="settingsProfileForm">
                         <div class="manage-form-grid">
                             <div class="manage-field"><label for="sName">Business Name</label><input type="text" id="sName" required></div>
+                            <div class="manage-field"><label for="sEmail">Public Email</label><input type="email" id="sEmail" placeholder="hello@deangels.com"></div>
+                            <div class="manage-field full"><label for="sTagline">Tagline</label><input type="text" id="sTagline" placeholder="Premium Meals. Great Grills. Amazing Moments."></div>
                             <div class="manage-field"><label for="sPhone">Phone</label><input type="text" id="sPhone" placeholder="0800 000 0000"></div>
+                            <div class="manage-field"><label for="sWhatsapp">WhatsApp</label><input type="text" id="sWhatsapp" placeholder="23480… or https://wa.me/…"></div>
                             <div class="manage-field full"><label for="sAddress">Address</label><input type="text" id="sAddress"></div>
                             <div class="manage-field"><label for="sHours">Opening Hours</label><input type="text" id="sHours"></div>
-                            <div class="manage-field"><label for="sEmail">Public Email</label><input type="email" id="sEmail"></div>
+                            <div class="manage-field"><label for="sMaps">Google Maps URL</label><input type="url" id="sMaps" placeholder="https://maps.google.com/maps?q=…"></div>
                             <div class="manage-field full"><button type="submit" class="vault-btn" style="width:auto;padding:12px 28px;max-width:100%">Save Profile</button></div>
                         </div>
                     </form>
                 </div>
 
                 <div class="manage-card mb-4">
-                    <h3 style="font-family:Oswald;margin:0 0 16px;font-size:1.05rem">Notifications</h3>
+                    <h3 style="font-family:Oswald;margin:0 0 8px;font-size:1.05rem">Social Links</h3>
+                    <p style="color:var(--vault-muted);margin:0 0 18px;font-size:13px;line-height:1.6">Icon buttons on the homepage and in every footer follow these URLs.</p>
+                    <form id="settingsSocialForm">
+                        <div class="manage-form-grid">
+                            <div class="manage-field"><label for="sInstagram">Instagram</label><input type="url" id="sInstagram" placeholder="https://instagram.com/…"></div>
+                            <div class="manage-field"><label for="sFacebook">Facebook</label><input type="url" id="sFacebook" placeholder="https://facebook.com/…"></div>
+                            <div class="manage-field"><label for="sTwitter">X / Twitter</label><input type="url" id="sTwitter" placeholder="https://x.com/…"></div>
+                            <div class="manage-field"><label for="sYoutube">YouTube</label><input type="url" id="sYoutube" placeholder="https://youtube.com/…"></div>
+                            <div class="manage-field full"><button type="submit" class="vault-btn" style="width:auto;padding:12px 28px;max-width:100%">Save Social Links</button></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="manage-card mb-4">
+                    <h3 style="font-family:Oswald;margin:0 0 8px;font-size:1.05rem">Website Preview</h3>
+                    <p style="color:var(--vault-muted);margin:0 0 14px;font-size:13px">How the house currently appears on the public site.</p>
+                    <div class="settings-preview">
+                        <strong id="previewName">De Angels Bar &amp; Grills</strong>
+                        <p id="previewTagline" class="mb-2"></p>
+                        <p id="previewAddress" class="mb-1"></p>
+                        <p id="previewHours" class="mb-1"></p>
+                        <p id="previewContact" class="mb-0"></p>
+                    </div>
+                </div>
+
+                <div class="manage-card mb-4">
+                    <h3 style="font-family:Oswald;margin:0 0 8px;font-size:1.05rem">Notifications</h3>
+                    <p style="color:var(--vault-muted);margin:0 0 18px;font-size:13px;line-height:1.6">When a guest books or writes from the website, Command Deck can toast on every open admin page.</p>
                     <form id="settingsNotifyForm">
                         <div class="manage-form-grid">
                             <div class="manage-field full">
                                 <label class="vault-check" style="display:flex;align-items:center;gap:10px;color:var(--vault-text)">
-                                    <input type="checkbox" id="sAlertReservations"> Alert on new reservations
+                                    <input type="checkbox" id="sAlertReservations"> Alert on new website reservations
                                 </label>
                             </div>
                             <div class="manage-field full">
                                 <label class="vault-check" style="display:flex;align-items:center;gap:10px;color:var(--vault-text)">
-                                    <input type="checkbox" id="sAlertMessages"> Alert on new messages
+                                    <input type="checkbox" id="sAlertMessages"> Alert on new website messages
                                 </label>
                             </div>
                             <div class="manage-field full">
                                 <label class="vault-check" style="display:flex;align-items:center;gap:10px;color:var(--vault-text)">
-                                    <input type="checkbox" id="sAlertEvents"> Alert on new events
+                                    <input type="checkbox" id="sAlertEvents"> Alert on new published events
                                 </label>
                             </div>
                             <div class="manage-field full"><button type="submit" class="vault-btn" style="width:auto;padding:12px 28px;max-width:100%">Save Notifications</button></div>
@@ -115,17 +153,20 @@
 
                 <div class="manage-card">
                     <h3 style="font-family:Oswald;margin:0 0 12px;font-size:1.05rem">Data</h3>
-                    <p style="color:var(--vault-muted);margin:0 0 18px;line-height:1.6">Reset local Command Deck demo data (reservations, messages, events, portfolio). This cannot be undone on this browser.</p>
+                    <p style="color:var(--vault-muted);margin:0 0 18px;line-height:1.6">Reset local Command Deck demo data (reservations, messages, menu 86s, events, portfolio, seats). The public site will reload house defaults in this browser. This cannot be undone here.</p>
+                    <label class="vault-check" style="display:flex;align-items:center;gap:10px;color:var(--vault-text);margin-bottom:16px">
+                        <input type="checkbox" id="sResetSettings"> Also reset venue profile, social links and alerts
+                    </label>
                     <button type="button" class="vault-btn" id="settingsResetData" style="width:auto;padding:12px 28px;max-width:100%;background:linear-gradient(135deg,#ED1C24,#a31218)"><i class="fa fa-trash-alt"></i> Reset Local Vault Data</button>
                 </div>
             </main>
         </div>
     </div>
     <nav class="vault-mobile-dock" aria-label="Quick navigation">
-        <a href="dashboard.html" class="dock-item" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Deck</span></a>
-        <a href="reservations.html" class="dock-item" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Bookings</span></a>
-        <a href="message-inbox.html" class="dock-item" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Inbox</span></a>
-        <a href="menu-vault.html" class="dock-item" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu</span></a>
+        <a href="dashboard.php" class="dock-item" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Deck</span></a>
+        <a href="reservations.php" class="dock-item" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Bookings</span></a>
+        <a href="message-inbox.php" class="dock-item" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Inbox</span></a>
+        <a href="menu-vault.php" class="dock-item" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu</span></a>
         <button type="button" class="dock-item" id="dockMenuBtn" aria-label="More options"><i class="fa fa-ellipsis-h"></i><span>More</span></button>
     </nav>
     <script src="js/auth.js"></script>

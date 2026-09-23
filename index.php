@@ -35,7 +35,7 @@
         <!-- Navbar & Hero -->
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="index.php" class="navbar-brand p-0">
                     <img src="img/logo.png" alt="De Angels Bar & Grills">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -43,14 +43,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="team.html" class="nav-item nav-link">Services</a>
-                        <a href="reservations.html" class="nav-item nav-link">Reservations</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.php" class="nav-item nav-link active">Home</a>
+                        <a href="about.php" class="nav-item nav-link">About</a>
+                        <a href="menu.php" class="nav-item nav-link">Menu</a>
+                        <a href="team.php" class="nav-item nav-link">Services</a>
+                        <a href="reservations.php" class="nav-item nav-link">Reservations</a>
+                        <a href="contact.php" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="menu.html" class="btn btn-accent py-2 px-4">Order Now</a>
+                    <a href="menu.php" class="btn btn-accent py-2 px-4">Order Now</a>
                 </div>
             </nav>
 
@@ -70,8 +70,8 @@
                             <h1 class="display-3 text-white animated slideInLeft mb-3">Premium Meals. Great Grills.<br>Amazing Moments.</h1>
                             <p class="hero-tagline animated slideInLeft mb-4" id="heroSlideTagline">Neon nights, open sky and tables waiting under the De Angels glow.</p>
                             <p class="hero-points animated slideInLeft mb-4">Meals <span>•</span> Grills <span>•</span> Moments</p>
-                            <a href="menu.html" class="btn btn-accent py-sm-3 px-sm-5 me-3 mb-2 animated slideInLeft">Order Now</a>
-                            <a href="#menu" class="btn btn-primary py-sm-3 px-sm-5 mb-2 animated slideInLeft">Explore Menu</a>
+                            <a href="menu.php" class="btn btn-accent hero-cta py-sm-3 px-sm-5 me-3 mb-2 animated slideInLeft">Order Now</a>
+                            <a href="#menu" class="btn btn-primary hero-cta py-sm-3 px-sm-5 mb-2 animated slideInLeft">Explore Menu</a>
                         </div>
                         <div class="col-lg-6 text-center hero-grill-wrap">
                             <img class="hero-grill" src="img/hero.png" alt="Signature charcoal grills at De Angels Bar & Grills">
@@ -127,7 +127,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">Our Story</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">Our Story</a>
                     </div>
                 </div>
             </div>
@@ -140,6 +140,7 @@
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Our Menu</h5>
                     <h1 class="mb-5">Flavour From The Fire</h1>
                 </div>
+                <div id="vaultMenuNotice" class="menu-86-notice" hidden></div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5 flex-wrap">
                         <li class="nav-item">
@@ -201,14 +202,14 @@
                                                 <span>Isi-ewu</span>
                                                 <span>Continental &amp; Local Dishes</span>
                                             </div>
-                                            <a href="contact.html" class="btn btn-primary py-2 px-4">Order Take Out</a>
+                                            <a href="contact.php" class="btn btn-primary py-2 px-4">Order Take Out</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Grills">
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m2">
                                         <img class="flex-shrink-0 menu-thumb" src="img/grill-night.png" alt="Pepper chicken">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -220,7 +221,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m3">
                                         <img class="flex-shrink-0 menu-thumb" src="img/barbecue-catfish.png" alt="Catfish barbecue">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -232,7 +233,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m10">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pepper-turkey.png" alt="Fried pepper turkey">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -256,7 +257,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m11">
                                         <img class="flex-shrink-0 menu-thumb" src="img/crispy-prawn.png" alt="Crispy prawn">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -268,7 +269,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m12">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pepper-snail.png" alt="Peppered snail">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -294,7 +295,7 @@
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Mains">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center menu-item-card" data-vault-id="m6">
                                         <img class="flex-shrink-0 menu-thumb" src="img/jollof-rice.png" alt="Jollof rice">
@@ -308,7 +309,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m13">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fried-rice.png" alt="Fried rice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -320,7 +321,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m14">
                                         <img class="flex-shrink-0 menu-thumb" src="img/native-rice.png" alt="Native rice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -332,7 +333,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m15">
                                         <img class="flex-shrink-0 menu-thumb" src="img/coconut-rice-fish.png" alt="White rice and moimoi">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -344,7 +345,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m16">
                                         <img class="flex-shrink-0 menu-thumb" src="img/ikwokrikwo.png" alt="Ikwokrikwo">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -356,7 +357,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m17">
                                         <img class="flex-shrink-0 menu-thumb" src="img/goat-pepper-soup.png" alt="Goat meat pepper soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -368,7 +369,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m18">
                                         <img class="flex-shrink-0 menu-thumb" src="img/vegetable-soup.png" alt="Vegetable soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -380,7 +381,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m19">
                                         <img class="flex-shrink-0 menu-thumb" src="img/nsala-soup.jpg" alt="Nsala soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -392,7 +393,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m20">
                                         <img class="flex-shrink-0 menu-thumb" src="img/okro-fisherman-soup.png" alt="Okro soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -404,7 +405,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m21">
                                         <img class="flex-shrink-0 menu-thumb" src="img/vegetable-soup.png" alt="Bitter leaf soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -416,7 +417,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m22">
                                         <img class="flex-shrink-0 menu-thumb" src="img/egusi-soup.png" alt="Ogbono soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -428,7 +429,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m23">
                                         <img class="flex-shrink-0 menu-thumb" src="img/native-soup.png" alt="Ofe owerre">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -442,7 +443,7 @@
                             </div>
                         </div>
                         <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Fast Food">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center menu-item-card" data-vault-id="m7">
                                         <img class="flex-shrink-0 menu-thumb" src="img/menu-3.jpg" alt="Angels smash burger">
@@ -456,7 +457,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m24">
                                         <img class="flex-shrink-0 menu-thumb" src="img/meat-pie.png" alt="Meat pie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -468,7 +469,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m25">
                                         <img class="flex-shrink-0 menu-thumb" src="img/chicken-pie.png" alt="Chicken pie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -480,7 +481,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m26">
                                         <img class="flex-shrink-0 menu-thumb" src="img/doughnut.png" alt="Doughnut">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -492,7 +493,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m27">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fish-pie.png" alt="Fish pie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -504,7 +505,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m28">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fish-roll.png" alt="Fish roll">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -516,7 +517,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m29">
                                         <img class="flex-shrink-0 menu-thumb" src="img/sausage-roll.png" alt="Sausage roll">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -528,7 +529,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m30">
                                         <img class="flex-shrink-0 menu-thumb" src="img/crispy-prawn.png" alt="Crispy prawn">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -540,7 +541,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m38">
                                         <img class="flex-shrink-0 menu-thumb" src="img/chocolate-cake.png" alt="Chocolate cake">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -552,7 +553,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m39">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fruit-cake.png" alt="Fruit cake">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -566,7 +567,7 @@
                             </div>
                         </div>
                         <div id="tab-4" class="tab-pane fade show p-0">
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Drinks">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center menu-item-card" data-vault-id="m8">
                                         <img class="flex-shrink-0 menu-thumb" src="img/menu-4.jpg" alt="Signature cocktail">
@@ -580,7 +581,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m31">
                                         <img class="flex-shrink-0 menu-thumb" src="img/smoothie.png" alt="Mocktail">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -592,7 +593,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m32">
                                         <img class="flex-shrink-0 menu-thumb" src="img/smoothie.png" alt="Smoothie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -604,7 +605,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m33">
                                         <img class="flex-shrink-0 menu-thumb" src="img/cucumber-juice.png" alt="Fresh cucumber juice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -616,7 +617,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m34">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pineapple-juice.png" alt="Pineapple juice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -628,7 +629,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m35">
                                         <img class="flex-shrink-0 menu-thumb" src="img/chilled-sodas-malt-water.png" alt="Long Island cocktail">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -640,7 +641,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m36">
                                         <img class="flex-shrink-0 menu-thumb" src="img/mixed-fruits.png" alt="Mixed fruits">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -652,7 +653,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m37">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pineapple-juice.png" alt="Fresh juice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -666,7 +667,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="menu.html" class="btn btn-primary py-3 px-5 mt-5">View Full Menu</a>
+                    <a href="menu.php" class="btn btn-primary py-3 px-5 mt-5">View Full Menu</a>
                 </div>
             </div>
         </div>
@@ -687,7 +688,7 @@
                                 <p class="mb-2 small">Thick okra stew loaded with fresh fish, prawns and seafood in a rich, peppery broth.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.php" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -700,7 +701,7 @@
                                 <p class="mb-2 small">Ground melon seed stew with leafy greens, tender protein and rich West African flavour.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.php" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -713,7 +714,7 @@
                                 <p class="mb-2 small">Hearty native-style soup with assorted meat, leafy greens and rich palm-oil broth.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.php" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -726,7 +727,7 @@
                                 <p class="mb-2 small">Rich afang leaves, tender protein and deep Calabar-style flavour in every bowl.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="dish-price">₦5,500</span>
-                                    <a href="reservations.html" class="btn btn-sm btn-primary px-3">Order</a>
+                                    <a href="reservations.php" class="btn btn-sm btn-primary px-3">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -763,7 +764,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="drink-card">
+                        <div class="drink-card" data-vault-id="m9">
                             <img src="img/chilled-sodas-malt-water.png" alt="Beers">
                             <div class="drink-overlay">
                                 <h5 class="mb-1">Beers</h5>
@@ -798,7 +799,7 @@
                             <div class="col-sm-6"><i class="fa fa-check text-primary me-2"></i>Family-friendly weekends</div>
                             <div class="col-sm-6"><i class="fa fa-check text-primary me-2"></i>Private outdoor corners</div>
                         </div>
-                        <a href="reservations.html" class="btn btn-primary py-3 px-5">Reserve Outdoor Seating</a>
+                        <a href="reservations.php" class="btn btn-primary py-3 px-5">Reserve Outdoor Seating</a>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="outdoor-panel">
@@ -939,6 +940,18 @@
             </div>
         </div>
 
+        <!-- Upcoming events from Command Deck -->
+        <div class="container-fluid py-5" id="events">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Terrace Bookings</h5>
+                    <h1 class="mb-3">Upcoming Gatherings</h1>
+                    <p class="mx-auto mb-5" style="max-width: 620px; color: var(--secondary);">Private events published from Event Horizon appear here. Book a table or send a note to plan yours.</p>
+                </div>
+                <div class="row g-4" id="vaultEventList" data-vault-event-list></div>
+            </div>
+        </div>
+
         <!-- Gallery -->
         <div class="container-fluid py-5 bg-cream gallery-section" id="gallery">
             <div class="container">
@@ -952,6 +965,8 @@
                     <button type="button" class="gallery-filter" data-filter="terrace">Terrace</button>
                     <button type="button" class="gallery-filter" data-filter="lounge">Lounge</button>
                     <button type="button" class="gallery-filter" data-filter="night">Night Life</button>
+                    <button type="button" class="gallery-filter" data-filter="hosted">Hosted</button>
+                    <button type="button" class="gallery-filter" data-filter="catering">Catering</button>
                 </div>
 
                 <div class="gallery-showcase">
@@ -1053,6 +1068,7 @@
                         </div>
                     </div>
 
+                    <div class="row g-4 mt-2" id="vaultPortfolioStrip" data-vault-portfolio-grid></div>
                 </div>
             </div>
         </div>
@@ -1144,6 +1160,12 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                                            <label for="phone">Phone</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
                                         <div class="form-floating date" id="date3" data-target-input="nearest">
                                             <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
                                             <label for="datetime">Date &amp; Time</label>
@@ -1160,6 +1182,18 @@
                                             <label for="select1">Party Size</label>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="select2">
+                                                <option>Indoor table</option>
+                                                <option>Outdoor terrace</option>
+                                                <option>Private gathering</option>
+                                                <option>Catering enquiry</option>
+                                                <option>Takeaway / delivery</option>
+                                            </select>
+                                            <label for="select2">Booking Type</label>
+                                        </div>
+                                    </div>
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <textarea class="form-control" placeholder="Occasion or request" id="message" style="height: 100px"></textarea>
@@ -1168,6 +1202,9 @@
                                     </div>
                                     <div class="col-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">Reserve Now</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div id="bookingSuccess" class="booking-success" hidden></div>
                                     </div>
                                 </div>
                             </form>
@@ -1198,35 +1235,34 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Find Us</h5>
-                    <h1 class="mb-5">Visit De Angels Bar &amp; Grills</h1>
+                    <h1 class="mb-5">Visit <span data-vault-setting="name">De Angels Bar &amp; Grills</span></h1>
                 </div>
                 <div class="row g-4 mb-5">
                     <div class="col-md-4">
                         <div class="contact-chip">
                             <h5 class="text-primary mb-3"><i class="fa fa-map-marker-alt me-2"></i>Location</h5>
-                            <p class="mb-0">Plot F16, Housing Area B, New Owerri</p>
+                            <p class="mb-0" data-vault-setting="address">Plot F16, Housing Area B, New Owerri</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="contact-chip">
                             <h5 class="text-primary mb-3"><i class="fa fa-clock me-2"></i>Opening Hours</h5>
-                            <p class="mb-1">Monday – Sunday</p>
-                            <p class="mb-0">10:00 AM – 5:00 AM</p>
+                            <p class="mb-0" data-vault-setting="hours">Monday – Sunday · 10:00 AM – 5:00 AM</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="contact-chip">
                             <h5 class="text-primary mb-3"><i class="fa fa-share-alt me-2"></i>Social</h5>
                             <p class="mb-2">Follow the grills, drinks and terrace nights.</p>
-                            <a class="btn btn-square btn-primary me-2" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-square btn-primary me-2" href="#" data-vault-href="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary me-2" href="#" data-vault-href="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary" href="#" data-vault-href="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="contact.html" class="btn btn-primary py-3 px-5 me-2 mb-2">Get Directions</a>
-                    <a href="https://instagram.com" class="btn btn-accent py-3 px-5 mb-2" target="_blank" rel="noopener">Follow On Instagram</a>
+                    <a href="contact.php" class="btn btn-primary py-3 px-5 me-2 mb-2">Get Directions</a>
+                    <a href="https://instagram.com" class="btn btn-accent py-3 px-5 mb-2" target="_blank" rel="noopener" data-vault-href="instagram">Follow On Instagram</a>
                 </div>
             </div>
         </div>
@@ -1237,31 +1273,34 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <img src="img/logo.png" alt="De Angels Bar & Grills" class="footer-logo">
-                        <p>Premium Meals. Great Grills. Amazing Moments.</p>
+                        <p data-vault-setting="tagline">Premium Meals. Great Grills. Amazing Moments.</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Explore</h4>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="menu.html">Our Menu</a>
-                        <a class="btn btn-link" href="team.html">Services</a>
-                        <a class="btn btn-link" href="reservations.html">Reservations</a>
-                        <a class="btn btn-link" href="contact.html">Contact</a>
-                        <a class="btn btn-link" href="admin/admin-dashboard.html">Admin Dashboard</a>
+                        <a class="btn btn-link" href="about.php">About Us</a>
+                        <a class="btn btn-link" href="menu.php">Our Menu</a>
+                        <a class="btn btn-link" href="team.php">Services</a>
+                        <a class="btn btn-link" href="reservations.php">Reservations</a>
+                        <a class="btn btn-link" href="contact.php">Contact</a>
+                        <a class="btn btn-link" href="admin/admin-dashboard.php">Admin Dashboard</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plot F16, Housing Area B, New Owerri</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span data-vault-setting="address">Plot F16, Housing Area B, New Owerri</span></p>
+                        <p class="mb-2" data-vault-hide-empty="phone"><i class="fa fa-phone-alt me-3"></i><a data-vault-setting="phone" data-vault-href="phone">Call us</a></p>
+                        <p class="mb-2" data-vault-hide-empty="email"><i class="fa fa-envelope me-3"></i><a data-vault-setting="email" data-vault-href="email">hello@deangels.com</a></p>
+                        <p class="mb-2" data-vault-hide-empty="whatsapp"><i class="fab fa-whatsapp me-3"></i><a data-vault-setting="whatsapp" data-vault-href="whatsapp" data-vault-keep-label="1">WhatsApp</a></p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="twitter" data-vault-hide-empty="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday – Sunday</h5>
-                        <p>10:00 AM – 5:00 AM</p>
+                        <h5 class="text-light fw-normal">Opening Hours</h5>
+                        <p data-vault-setting="hours">Monday – Sunday · 10:00 AM – 5:00 AM</p>
                     </div>
                 </div>
             </div>
@@ -1269,15 +1308,15 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="index.html">De Angels Bar &amp; Grills</a>, All Rights Reserved.
+                            &copy; <a class="border-bottom" href="index.php" data-vault-setting="name">De Angels Bar &amp; Grills</a>, All Rights Reserved.
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="menu.html">Menu</a>
-                                <a href="reservations.html">Book</a>
-                                <a href="contact.html">Contact</a>
-                                <a href="admin/admin-dashboard.html">Admin</a>
+                                <a href="index.php">Home</a>
+                                <a href="menu.php">Menu</a>
+                                <a href="reservations.php">Book</a>
+                                <a href="contact.php">Contact</a>
+                                <a href="admin/admin-dashboard.php">Admin</a>
                             </div>
                         </div>
                     </div>
@@ -1301,6 +1340,7 @@
     <script src="js/vault-bridge.js"></script>
     <script src="js/vault-forms.js"></script>
     <script src="js/vault-menu.js"></script>
+    <script src="js/vault-site.js"></script>
     <script src="js/main.js"></script>
 </body>
 

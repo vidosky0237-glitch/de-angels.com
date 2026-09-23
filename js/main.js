@@ -218,11 +218,11 @@
         }
 
         var filters = gallery.querySelectorAll('.gallery-filter');
-        var cells = gallery.querySelectorAll('.gallery-cell');
 
         filters.forEach(function (btn) {
             btn.addEventListener('click', function () {
                 var category = btn.getAttribute('data-filter');
+                var cells = gallery.querySelectorAll('.gallery-cell');
 
                 filters.forEach(function (item) {
                     item.classList.remove('active');

@@ -10,14 +10,14 @@
     <script>
         (function () {
             if (window.VaultAuth && VaultAuth.isAuthenticated()) {
-                window.location.replace('dashboard.html');
+                window.location.replace('dashboard.php');
             } else {
-                window.location.replace('admin-login.html');
+                window.location.replace('admin-login.php');
             }
         })();
     </script>
 </head>
 <body>
-    <p>Redirecting to Admin… <a href="admin-login.html">Continue</a></p>
+    <p>Redirecting to Admin… <a href="admin-login.php">Continue</a></p>
 </body>
 </html>

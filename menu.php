@@ -34,7 +34,7 @@
 
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="index.php" class="navbar-brand p-0">
                     <img src="img/logo.png" alt="De Angels Bar & Grills">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -42,14 +42,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="menu.html" class="nav-item nav-link active">Menu</a>
-                        <a href="team.html" class="nav-item nav-link">Services</a>
-                        <a href="reservations.html" class="nav-item nav-link">Reservations</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.php" class="nav-item nav-link">Home</a>
+                        <a href="about.php" class="nav-item nav-link">About</a>
+                        <a href="menu.php" class="nav-item nav-link active">Menu</a>
+                        <a href="team.php" class="nav-item nav-link">Services</a>
+                        <a href="reservations.php" class="nav-item nav-link">Reservations</a>
+                        <a href="contact.php" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="reservations.html" class="btn btn-accent py-2 px-4">Order Now</a>
+                    <a href="reservations.php" class="btn btn-accent py-2 px-4">Order Now</a>
                 </div>
             </nav>
 
@@ -60,7 +60,7 @@
                     <p class="page-lead">Charcoal grills, hearty plates, quick bites and a bar that keeps the evening flowing.</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
                         </ol>
                     </nav>
@@ -70,6 +70,7 @@
 
         <div class="container-fluid py-5">
             <div class="container">
+                <div id="vaultMenuNotice" class="menu-86-notice" hidden></div>
                 <div class="spotlight-panel mb-5 wow fadeInUp" data-wow-delay="0.1s" data-vault-id="m1">
                     <div class="row g-0 align-items-stretch">
                         <div class="col-lg-6">
@@ -82,7 +83,7 @@
                                 <p class="text-white-50 mb-4">Chicken, beef, sausage and kebabs — charcoal-seared and built for the table. The dish guests order when they want the full De Angels experience in one platter.</p>
                                 <div class="d-flex flex-wrap align-items-center justify-content-between">
                                     <span class="dish-price text-white fs-3">₦12,000</span>
-                                    <a href="reservations.html" class="btn btn-accent py-2 px-4">Order This</a>
+                                    <a href="reservations.php" class="btn btn-accent py-2 px-4">Order This</a>
                                 </div>
                             </div>
                         </div>
@@ -153,15 +154,15 @@
                                                 <span>Isi-ewu</span>
                                                 <span>Continental &amp; Local Dishes</span>
                                             </div>
-                                            <a href="contact.html" class="btn btn-primary py-2 px-4 me-2 mb-2">Order Take Out</a>
-                                            <a href="reservations.html" class="btn btn-outline-light py-2 px-4 mb-2">Catering Enquiry</a>
+                                            <a href="contact.php" class="btn btn-primary py-2 px-4 me-2 mb-2">Order Take Out</a>
+                                            <a href="reservations.php" class="btn btn-outline-light py-2 px-4 mb-2">Catering Enquiry</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Grills">
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m2">
                                         <img class="flex-shrink-0 menu-thumb" src="img/grill-night.png" alt="Pepper chicken">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Pepper Chicken</span><span class="text-primary">₦6,500</span></h5>
@@ -179,7 +180,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m10">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pepper-turkey.png" alt="Fried pepper turkey">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Pepper Turkey</span><span class="text-primary">₦8,500</span></h5>
@@ -197,7 +198,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m11">
                                         <img class="flex-shrink-0 menu-thumb" src="img/crispy-prawn.png" alt="Crispy prawn">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Crispy Prawn</span><span class="text-primary">₦5,000</span></h5>
@@ -224,7 +225,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m12">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pepper-snail.png" alt="Peppered snail">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Peppered Snail</span><span class="text-primary">₦3,800</span></h5>
@@ -235,7 +236,7 @@
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Mains">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center menu-item-card" data-vault-id="m6">
                                         <img class="flex-shrink-0 menu-thumb" src="img/jollof-rice.png" alt="Jollof rice">
@@ -246,7 +247,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m13">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fried-rice.png" alt="Fried rice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Fried Rice</span><span class="text-primary">₦4,200</span></h5>
@@ -255,7 +256,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m14">
                                         <img class="flex-shrink-0 menu-thumb" src="img/native-rice.png" alt="Native rice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Native Rice</span><span class="text-primary">₦4,500</span></h5>
@@ -264,7 +265,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m15">
                                         <img class="flex-shrink-0 menu-thumb" src="img/coconut-rice-fish.png" alt="White rice and moimoi">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>White Rice &amp; Moimoi</span><span class="text-primary">₦3,800</span></h5>
@@ -273,7 +274,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m16">
                                         <img class="flex-shrink-0 menu-thumb" src="img/ikwokrikwo.png" alt="Ikwokrikwo">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Ikwokrikwo</span><span class="text-primary">₦5,000</span></h5>
@@ -282,7 +283,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m17">
                                         <img class="flex-shrink-0 menu-thumb" src="img/goat-pepper-soup.png" alt="Goat meat pepper soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Goat Meat Pepper Soup</span><span class="text-primary">₦5,500</span></h5>
@@ -291,7 +292,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m18">
                                         <img class="flex-shrink-0 menu-thumb" src="img/vegetable-soup.png" alt="Vegetable soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Vegetable Soup</span><span class="text-primary">₦5,500</span></h5>
@@ -300,7 +301,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m19">
                                         <img class="flex-shrink-0 menu-thumb" src="img/nsala-soup.jpg" alt="Nsala soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Nsala Soup</span><span class="text-primary">₦5,500</span></h5>
@@ -309,7 +310,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m20">
                                         <img class="flex-shrink-0 menu-thumb" src="img/okro-fisherman-soup.png" alt="Okro soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Okro Soup</span><span class="text-primary">₦5,500</span></h5>
@@ -318,7 +319,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m21">
                                         <img class="flex-shrink-0 menu-thumb" src="img/vegetable-soup.png" alt="Bitter leaf soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Bitter Leaf Soup</span><span class="text-primary">₦5,500</span></h5>
@@ -327,7 +328,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m22">
                                         <img class="flex-shrink-0 menu-thumb" src="img/egusi-soup.png" alt="Ogbono soup">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Ogbono Soup</span><span class="text-primary">₦5,500</span></h5>
@@ -336,7 +337,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m23">
                                         <img class="flex-shrink-0 menu-thumb" src="img/native-soup.png" alt="Ofe owerre">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Ofe Owerre</span><span class="text-primary">₦5,500</span></h5>
@@ -347,7 +348,7 @@
                             </div>
                         </div>
                         <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Fast Food">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center menu-item-card" data-vault-id="m7">
                                         <img class="flex-shrink-0 menu-thumb" src="img/menu-3.jpg" alt="Burger">
@@ -358,7 +359,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m24">
                                         <img class="flex-shrink-0 menu-thumb" src="img/meat-pie.png" alt="Meat pie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Meat Pie</span><span class="text-primary">₦1,200</span></h5>
@@ -367,7 +368,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m25">
                                         <img class="flex-shrink-0 menu-thumb" src="img/chicken-pie.png" alt="Chicken pie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Chicken Pie</span><span class="text-primary">₦1,400</span></h5>
@@ -376,7 +377,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m26">
                                         <img class="flex-shrink-0 menu-thumb" src="img/doughnut.png" alt="Doughnut">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Doughnut</span><span class="text-primary">₦800</span></h5>
@@ -385,7 +386,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m27">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fish-pie.png" alt="Fish pie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Fish Pie</span><span class="text-primary">₦1,400</span></h5>
@@ -394,7 +395,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m28">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fish-roll.png" alt="Fish roll">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Fish Roll</span><span class="text-primary">₦1,200</span></h5>
@@ -403,7 +404,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m29">
                                         <img class="flex-shrink-0 menu-thumb" src="img/sausage-roll.png" alt="Sausage roll">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Sausage Roll</span><span class="text-primary">₦1,200</span></h5>
@@ -412,7 +413,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m30">
                                         <img class="flex-shrink-0 menu-thumb" src="img/crispy-prawn.png" alt="Crispy prawn">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Crispy Prawn</span><span class="text-primary">₦4,500</span></h5>
@@ -421,7 +422,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m38">
                                         <img class="flex-shrink-0 menu-thumb" src="img/chocolate-cake.png" alt="Chocolate cake">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Chocolate Cake</span><span class="text-primary">₦2,500</span></h5>
@@ -430,7 +431,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m39">
                                         <img class="flex-shrink-0 menu-thumb" src="img/fruit-cake.png" alt="Fruit cake">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Fruit Cake</span><span class="text-primary">₦3,000</span></h5>
@@ -441,7 +442,7 @@
                             </div>
                         </div>
                         <div id="tab-4" class="tab-pane fade show p-0">
-                            <div class="row g-4">
+                            <div class="row g-4" data-vault-menu-grid="Drinks">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center menu-item-card" data-vault-id="m8">
                                         <img class="flex-shrink-0 menu-thumb" src="img/menu-4.jpg" alt="Cocktail">
@@ -452,7 +453,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m31">
                                         <img class="flex-shrink-0 menu-thumb" src="img/smoothie.png" alt="Mocktail">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Fresh Fruit Mocktail</span><span class="text-primary">₦2,500</span></h5>
@@ -461,7 +462,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m32">
                                         <img class="flex-shrink-0 menu-thumb" src="img/smoothie.png" alt="Smoothie">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Smoothie</span><span class="text-primary">₦2,500</span></h5>
@@ -470,7 +471,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m33">
                                         <img class="flex-shrink-0 menu-thumb" src="img/cucumber-juice.png" alt="Fresh cucumber juice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Fresh Cucumber Juice</span><span class="text-primary">₦1,800</span></h5>
@@ -479,7 +480,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m34">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pineapple-juice.png" alt="Pineapple juice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Pineapple Juice</span><span class="text-primary">₦2,000</span></h5>
@@ -488,7 +489,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m35">
                                         <img class="flex-shrink-0 menu-thumb" src="img/chilled-sodas-malt-water.png" alt="Long Island cocktail">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Long Island</span><span class="text-primary">₦4,500</span></h5>
@@ -497,7 +498,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m36">
                                         <img class="flex-shrink-0 menu-thumb" src="img/mixed-fruits.png" alt="Mixed fruits">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Mixed Fruits</span><span class="text-primary">₦2,200</span></h5>
@@ -506,7 +507,16 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center menu-item-card">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m9">
+                                        <img class="flex-shrink-0 menu-thumb" src="img/chilled-sodas-malt-water.png" alt="Ice-cold beers">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Ice-Cold Beers</span><span class="text-primary">₦1,500</span></h5>
+                                            <small class="fst-italic">Local and imported bottles</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center menu-item-card" data-vault-id="m37">
                                         <img class="flex-shrink-0 menu-thumb" src="img/pineapple-juice.png" alt="Juice">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2"><span>Fresh Juice Bar</span><span class="text-primary">₦2,000</span></h5>
@@ -517,7 +527,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="reservations.html" class="btn btn-accent py-3 px-5 mt-5">Place An Order</a>
+                    <a href="reservations.php" class="btn btn-accent py-3 px-5 mt-5">Place An Order</a>
                 </div>
             </div>
         </div>
@@ -618,8 +628,8 @@
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Hungry?</h5>
                     <h1 class="text-white mb-3">Ready When The Fire Is</h1>
                     <p class="text-white-50 mb-4 mx-auto" style="max-width: 540px;">Book a table, walk in for takeaway, or tell us about a gathering. We will take it from there.</p>
-                    <a href="reservations.html" class="btn btn-primary py-3 px-5 me-2 mb-2">Reserve Or Order</a>
-                    <a href="team.html" class="btn btn-accent py-3 px-5 mb-2">Plan An Event</a>
+                    <a href="reservations.php" class="btn btn-primary py-3 px-5 me-2 mb-2">Reserve Or Order</a>
+                    <a href="team.php" class="btn btn-accent py-3 px-5 mb-2">Plan An Event</a>
                 </div>
             </div>
         </div>
@@ -629,31 +639,34 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <img src="img/logo.png" alt="De Angels Bar & Grills" class="footer-logo">
-                        <p>Premium Meals. Great Grills. Amazing Moments.</p>
+                        <p data-vault-setting="tagline">Premium Meals. Great Grills. Amazing Moments.</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Explore</h4>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="menu.html">Our Menu</a>
-                        <a class="btn btn-link" href="team.html">Services</a>
-                        <a class="btn btn-link" href="reservations.html">Reservations</a>
-                        <a class="btn btn-link" href="contact.html">Contact</a>
-                        <a class="btn btn-link" href="admin/admin-dashboard.html">Admin Dashboard</a>
+                        <a class="btn btn-link" href="about.php">About Us</a>
+                        <a class="btn btn-link" href="menu.php">Our Menu</a>
+                        <a class="btn btn-link" href="team.php">Services</a>
+                        <a class="btn btn-link" href="reservations.php">Reservations</a>
+                        <a class="btn btn-link" href="contact.php">Contact</a>
+                        <a class="btn btn-link" href="admin/admin-dashboard.php">Admin Dashboard</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plot F16, Housing Area B, New Owerri</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span data-vault-setting="address">Plot F16, Housing Area B, New Owerri</span></p>
+                        <p class="mb-2" data-vault-hide-empty="phone"><i class="fa fa-phone-alt me-3"></i><a data-vault-setting="phone" data-vault-href="phone">Call us</a></p>
+                        <p class="mb-2" data-vault-hide-empty="email"><i class="fa fa-envelope me-3"></i><a data-vault-setting="email" data-vault-href="email">hello@deangels.com</a></p>
+                        <p class="mb-2" data-vault-hide-empty="whatsapp"><i class="fab fa-whatsapp me-3"></i><a data-vault-setting="whatsapp" data-vault-href="whatsapp" data-vault-keep-label="1">WhatsApp</a></p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="twitter" data-vault-hide-empty="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday – Sunday</h5>
-                        <p>10:00 AM – 5:00 AM</p>
+                        <h5 class="text-light fw-normal">Opening Hours</h5>
+                        <p data-vault-setting="hours">Monday – Sunday · 10:00 AM – 5:00 AM</p>
                     </div>
                 </div>
             </div>
@@ -661,15 +674,15 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="index.html">De Angels Bar &amp; Grills</a>, All Rights Reserved.
+                            &copy; <a class="border-bottom" href="index.php" data-vault-setting="name">De Angels Bar &amp; Grills</a>, All Rights Reserved.
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="menu.html">Menu</a>
-                                <a href="reservations.html">Book</a>
-                                <a href="contact.html">Contact</a>
-                                <a href="admin/admin-dashboard.html">Admin</a>
+                                <a href="index.php">Home</a>
+                                <a href="menu.php">Menu</a>
+                                <a href="reservations.php">Book</a>
+                                <a href="contact.php">Contact</a>
+                                <a href="admin/admin-dashboard.php">Admin</a>
                             </div>
                         </div>
                     </div>
@@ -692,6 +705,7 @@
     <script src="js/main.js"></script>
     <script src="admin/js/store.js"></script>
     <script src="js/vault-menu.js"></script>
+    <script src="js/vault-site.js"></script>
 </body>
 
 </html>

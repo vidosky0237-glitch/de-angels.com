@@ -34,7 +34,7 @@
 
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="index.php" class="navbar-brand p-0">
                     <img src="img/logo.png" alt="De Angels Bar & Grills">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -42,14 +42,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="team.html" class="nav-item nav-link active">Services</a>
-                        <a href="reservations.html" class="nav-item nav-link">Reservations</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.php" class="nav-item nav-link">Home</a>
+                        <a href="about.php" class="nav-item nav-link">About</a>
+                        <a href="menu.php" class="nav-item nav-link">Menu</a>
+                        <a href="team.php" class="nav-item nav-link active">Services</a>
+                        <a href="reservations.php" class="nav-item nav-link">Reservations</a>
+                        <a href="contact.php" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="menu.html" class="btn btn-accent py-2 px-4">Order Now</a>
+                    <a href="menu.php" class="btn btn-accent py-2 px-4">Order Now</a>
                 </div>
             </nav>
 
@@ -60,7 +60,7 @@
                     <p class="page-lead">Catering, terrace events, takeaway, delivery and private gatherings — more than a table.</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
                         </ol>
                     </nav>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a href="reservations.html" class="btn btn-primary py-3 px-5">Plan Your Event</a>
+                    <a href="reservations.php" class="btn btn-primary py-3 px-5">Plan Your Event</a>
                 </div>
             </div>
         </div>
@@ -229,7 +229,7 @@
                         <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Custom grill and small-chops menus</p>
                         <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Bar packages and mocktail stations</p>
                         <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Dedicated host for private bookings</p>
-                        <a href="reservations.html" class="btn btn-primary py-3 px-5">Start A Booking</a>
+                        <a href="reservations.php" class="btn btn-primary py-3 px-5">Start A Booking</a>
                     </div>
                 </div>
             </div>
@@ -282,14 +282,25 @@
             </div>
         </div>
 
+        <div class="container-fluid py-5 bg-cream">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">On The Calendar</h5>
+                    <h1 class="mb-3">Upcoming Gatherings</h1>
+                    <p class="mx-auto mb-5" style="max-width: 620px; color: var(--secondary);">Birthdays, team nights and terrace takeovers published from Event Horizon. Enquire if you want a similar setup.</p>
+                </div>
+                <div class="row g-4" data-vault-event-list></div>
+            </div>
+        </div>
+
         <div class="container-fluid py-5">
             <div class="container">
                 <div class="cta-banner wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Let’s Host You</h5>
                     <h1 class="text-white mb-3">Tell Us The Occasion</h1>
                     <p class="text-white-50 mb-4 mx-auto" style="max-width: 540px;">Birthdays, team nights, terrace takeovers and catering — we will shape the menu and the space around your guests.</p>
-                    <a href="reservations.html" class="btn btn-primary py-3 px-5 me-2 mb-2">Book Now</a>
-                    <a href="contact.html" class="btn btn-accent py-3 px-5 mb-2">Send A Message</a>
+                    <a href="reservations.php" class="btn btn-primary py-3 px-5 me-2 mb-2">Book Now</a>
+                    <a href="contact.php" class="btn btn-accent py-3 px-5 mb-2">Send A Message</a>
                 </div>
             </div>
         </div>
@@ -299,31 +310,34 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <img src="img/logo.png" alt="De Angels Bar & Grills" class="footer-logo">
-                        <p>Premium Meals. Great Grills. Amazing Moments.</p>
+                        <p data-vault-setting="tagline">Premium Meals. Great Grills. Amazing Moments.</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Explore</h4>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="menu.html">Our Menu</a>
-                        <a class="btn btn-link" href="team.html">Services</a>
-                        <a class="btn btn-link" href="reservations.html">Reservations</a>
-                        <a class="btn btn-link" href="contact.html">Contact</a>
-                        <a class="btn btn-link" href="admin/admin-dashboard.html">Admin Dashboard</a>
+                        <a class="btn btn-link" href="about.php">About Us</a>
+                        <a class="btn btn-link" href="menu.php">Our Menu</a>
+                        <a class="btn btn-link" href="team.php">Services</a>
+                        <a class="btn btn-link" href="reservations.php">Reservations</a>
+                        <a class="btn btn-link" href="contact.php">Contact</a>
+                        <a class="btn btn-link" href="admin/admin-dashboard.php">Admin Dashboard</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plot F16, Housing Area B, New Owerri</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span data-vault-setting="address">Plot F16, Housing Area B, New Owerri</span></p>
+                        <p class="mb-2" data-vault-hide-empty="phone"><i class="fa fa-phone-alt me-3"></i><a data-vault-setting="phone" data-vault-href="phone">Call us</a></p>
+                        <p class="mb-2" data-vault-hide-empty="email"><i class="fa fa-envelope me-3"></i><a data-vault-setting="email" data-vault-href="email">hello@deangels.com</a></p>
+                        <p class="mb-2" data-vault-hide-empty="whatsapp"><i class="fab fa-whatsapp me-3"></i><a data-vault-setting="whatsapp" data-vault-href="whatsapp" data-vault-keep-label="1">WhatsApp</a></p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="twitter" data-vault-hide-empty="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday – Sunday</h5>
-                        <p>10:00 AM – 5:00 AM</p>
+                        <h5 class="text-light fw-normal">Opening Hours</h5>
+                        <p data-vault-setting="hours">Monday – Sunday · 10:00 AM – 5:00 AM</p>
                     </div>
                 </div>
             </div>
@@ -331,15 +345,15 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="index.html">De Angels Bar &amp; Grills</a>, All Rights Reserved.
+                            &copy; <a class="border-bottom" href="index.php" data-vault-setting="name">De Angels Bar &amp; Grills</a>, All Rights Reserved.
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="menu.html">Menu</a>
-                                <a href="reservations.html">Book</a>
-                                <a href="contact.html">Contact</a>
-                                <a href="admin/admin-dashboard.html">Admin</a>
+                                <a href="index.php">Home</a>
+                                <a href="menu.php">Menu</a>
+                                <a href="reservations.php">Book</a>
+                                <a href="contact.php">Contact</a>
+                                <a href="admin/admin-dashboard.php">Admin</a>
                             </div>
                         </div>
                     </div>
@@ -359,6 +373,8 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="admin/js/store.js"></script>
+    <script src="js/vault-site.js"></script>
     <script src="js/main.js"></script>
 </body>
 

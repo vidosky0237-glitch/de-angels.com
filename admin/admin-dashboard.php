@@ -140,18 +140,18 @@
             <p>Sign in to the Command Deck to manage reservations, menu availability, events, portfolio and guest messages.</p>
 
             <div class="admin-entry-actions" id="entryActions">
-                <a class="vault-btn" href="admin-login.html"><i class="fa fa-lock"></i> Sign In To Dashboard</a>
-                <a class="admin-entry-ghost" href="../index.html"><i class="fa fa-arrow-left"></i> Back To Website</a>
+                <a class="vault-btn" href="admin-login.php"><i class="fa fa-lock"></i> Sign In To Dashboard</a>
+                <a class="admin-entry-ghost" href="../index.php"><i class="fa fa-arrow-left"></i> Back To Website</a>
             </div>
 
             <div class="admin-entry-links">
-                <a href="dashboard.html">Overview</a>
-                <a href="reservations.html">Reservations</a>
-                <a href="menu-vault.html">Menu Vault</a>
-                <a href="events.html">Events</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="message-inbox.html">Message Inbox</a>
-                <a href="admin-settings.html">Admin Settings</a>
+                <a href="dashboard.php">Overview</a>
+                <a href="reservations.php">Reservations</a>
+                <a href="menu-vault.php">Menu Vault</a>
+                <a href="events.php">Events</a>
+                <a href="portfolio.php">Portfolio</a>
+                <a href="message-inbox.php">Message Inbox</a>
+                <a href="admin-settings.php">Admin Settings</a>
             </div>
 
             <p class="admin-entry-note"><i class="fa fa-info-circle"></i> Protected staff area — unauthorized access is not permitted.</p>
@@ -164,7 +164,7 @@
             if (!window.VaultAuth) return;
 
             if (VaultAuth.isAuthenticated()) {
-                window.location.replace('dashboard.html');
+                window.location.replace('dashboard.php');
                 return;
             }
 
@@ -172,8 +172,8 @@
             if (!actions) return;
 
             actions.innerHTML =
-                '<a class="vault-btn" href="admin-login.html"><i class="fa fa-lock"></i> Sign In To Dashboard</a>' +
-                '<a class="admin-entry-ghost" href="../index.html"><i class="fa fa-arrow-left"></i> Back To Website</a>';
+                '<a class="vault-btn" href="admin-login.php"><i class="fa fa-lock"></i> Sign In To Dashboard</a>' +
+                '<a class="admin-entry-ghost" href="../index.php"><i class="fa fa-arrow-left"></i> Back To Website</a>';
         })();
     </script>
 </body>

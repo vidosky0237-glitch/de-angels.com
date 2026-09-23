@@ -122,7 +122,7 @@
         if (logoutBtn) {
             logoutBtn.addEventListener('click', function () {
                 VaultAuth.clearSession();
-                window.location.href = 'admin-login.html';
+                window.location.href = 'admin-login.php';
             });
         }
 
@@ -130,7 +130,81 @@
             options.onReady();
         }
 
+        initDeckAlerts();
+
         return { session: session };
+    }
+
+    function showDeckToast(message, href) {
+        var stack = document.getElementById('vaultToastStack');
+        if (!stack) {
+            stack = document.createElement('div');
+            stack.id = 'vaultToastStack';
+            stack.className = 'vault-toast-stack';
+            document.body.appendChild(stack);
+        }
+        var toast = document.createElement(href ? 'a' : 'div');
+        toast.className = 'vault-toast';
+        if (href) toast.href = href;
+        toast.textContent = message;
+        stack.appendChild(toast);
+        setTimeout(function () {
+            toast.classList.add('hide');
+            setTimeout(function () {
+                if (toast.parentNode) toast.parentNode.removeChild(toast);
+            }, 280);
+        }, 4200);
+    }
+
+    function initDeckAlerts() {
+        if (!window.VaultStore || !VaultStore.subscribe) return;
+        var prev = null;
+
+        function snapshot() {
+            var data = VaultStore.all();
+            return {
+                r: (data.reservations || []).length,
+                m: (data.messages || []).length,
+                e: (data.events || []).length
+            };
+        }
+
+        function latest(list) {
+            return (list || []).slice().sort(function (a, b) {
+                return (b.createdAt || 0) - (a.createdAt || 0);
+            })[0] || null;
+        }
+
+        function check() {
+            var snap = snapshot();
+            if (!prev) {
+                prev = snap;
+                return;
+            }
+            var data = VaultStore.all();
+            if (snap.r === prev.r + 1 && VaultStore.shouldAlert('reservation')) {
+                var last = latest(data.reservations);
+                if (last && last.source === 'website') {
+                    showDeckToast('New booking ' + (last.publicRef || '') + ' · ' + last.name, 'reservations.php');
+                }
+            }
+            if (snap.m === prev.m + 1 && VaultStore.shouldAlert('message')) {
+                var msg = latest(data.messages);
+                if (msg && msg.source === 'website') {
+                    showDeckToast('New message ' + (msg.publicRef || '') + ' · ' + msg.name, 'message-inbox.php');
+                }
+            }
+            if (snap.e === prev.e + 1 && VaultStore.shouldAlert('event')) {
+                var ev = latest(data.events);
+                if (ev && ev.published) {
+                    showDeckToast('New event ' + (ev.publicRef || '') + ' is on the website', 'events.php');
+                }
+            }
+            prev = snap;
+        }
+
+        VaultStore.subscribe(check);
+        check();
     }
 
     window.VaultShell = { init: initShell, getShift: getShift };

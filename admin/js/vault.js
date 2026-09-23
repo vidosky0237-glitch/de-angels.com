@@ -7,10 +7,19 @@
 
     var form = document.getElementById('vaultLoginForm');
     var toggleBtn = document.getElementById('togglePassword');
+    var emailInput = document.getElementById('email');
     var passwordInput = document.getElementById('password');
     var alertBox = document.getElementById('vaultAlert');
     var submitBtn = document.getElementById('vaultSubmit');
     var rememberBox = document.getElementById('remember');
+
+    if (emailInput && window.VaultAuth && VaultAuth.getRememberedEmail) {
+        var remembered = VaultAuth.getRememberedEmail();
+        if (remembered) {
+            emailInput.value = remembered;
+            if (rememberBox) rememberBox.checked = true;
+        }
+    }
 
     if (toggleBtn && passwordInput) {
         toggleBtn.addEventListener('click', function () {
@@ -57,14 +66,21 @@
                     submitBtn.classList.remove('loading');
                 }
 
-                if (window.VaultAuth) {
-                    VaultAuth.setSession(email.value.trim(), rememberBox && rememberBox.checked);
+                var ok = window.VaultAuth && VaultAuth.login(
+                    email.value,
+                    password.value,
+                    rememberBox && rememberBox.checked
+                );
+
+                if (!ok) {
+                    showAlert('Invalid email or password. Try admin@deangels.com.', 'error');
+                    return;
                 }
 
                 showAlert('Vault unlocked. Redirecting…', 'success');
 
                 setTimeout(function () {
-                    window.location.href = 'dashboard.html';
+                    window.location.href = 'dashboard.php';
                 }, 600);
             }, 900);
         });

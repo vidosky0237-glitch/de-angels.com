@@ -472,6 +472,41 @@ body.vault-body {
     color: #6ee7a8;
 }
 
+.vault-toast-stack {
+    position: fixed;
+    right: 20px;
+    bottom: 92px;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: min(360px, calc(100vw - 32px));
+}
+
+.vault-toast {
+    display: block;
+    background: var(--vault-panel);
+    border: 1px solid var(--vault-border-strong);
+    color: var(--vault-text);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.45;
+    text-decoration: none;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+a.vault-toast:hover {
+    border-color: var(--vault-primary);
+    color: var(--vault-text);
+}
+
+.vault-toast.hide {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s, transform 0.25s;
+}
+
 .vault-secure-note {
     display: flex;
     align-items: center;

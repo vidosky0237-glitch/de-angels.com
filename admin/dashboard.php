@@ -32,22 +32,22 @@
             </div>
             <nav class="vault-nav">
                 <span class="vault-nav-label">Operations</span>
-                <a href="dashboard.html" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Overview</span></a>
-                <a href="reservations.html" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
-                <a href="message-inbox.html" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Message Inbox</span></a>
+                <a href="dashboard.php" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Overview</span></a>
+                <a href="reservations.php" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
+                <a href="message-inbox.php" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Message Inbox</span></a>
 
                 <span class="vault-nav-label">Hospitality</span>
-                <a href="menu-vault.html" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu Vault</span></a>
-                <a href="events.html" data-nav="events"><i class="fa fa-glass-cheers"></i><span>Events</span></a>
-                <a href="portfolio.html" data-nav="portfolio"><i class="fa fa-images"></i><span>Portfolio</span></a>
+                <a href="menu-vault.php" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu Vault</span></a>
+                <a href="events.php" data-nav="events"><i class="fa fa-glass-cheers"></i><span>Events</span></a>
+                <a href="portfolio.php" data-nav="portfolio"><i class="fa fa-images"></i><span>Portfolio</span></a>
 
                 <span class="vault-nav-label">System</span>
-                <a href="admin-settings.html" data-nav="admin-settings"><i class="fa fa-cog"></i><span>Admin Settings</span></a>
-                <a href="admin-dashboard.html"><i class="fa fa-th-large"></i><span>Admin Dashboard</span></a>
-                <a href="../index.html" target="_blank" rel="noopener"><i class="fa fa-globe"></i><span>View Website</span></a>
+                <a href="admin-settings.php" data-nav="admin-settings"><i class="fa fa-cog"></i><span>Admin Settings</span></a>
+                <a href="admin-dashboard.php"><i class="fa fa-th-large"></i><span>Admin Dashboard</span></a>
+                <a href="../index.php" target="_blank" rel="noopener"><i class="fa fa-globe"></i><span>View Website</span></a>
             </nav>
             <div class="vault-sidebar-foot">
-                <a href="../contact.html" target="_blank" rel="noopener"><i class="fa fa-map-marker-alt"></i><span>Plot F16, New Owerri</span></a>
+                <a href="../contact.php" target="_blank" rel="noopener"><i class="fa fa-map-marker-alt"></i><span>Plot F16, New Owerri</span></a>
                 <button type="button" class="vault-logout" id="vaultLogout"><i class="fa fa-sign-out-alt"></i> Sign Out</button>
             </div>
         </aside>
@@ -80,8 +80,8 @@
                             <p id="pulseText">Loading live house data…</p>
                         </div>
                         <div class="deck-hero-actions">
-                            <a href="reservations.html" class="deck-hero-btn primary"><i class="fa fa-plus"></i> New Booking</a>
-                            <a href="menu-vault.html" class="deck-hero-btn ghost"><i class="fa fa-ban"></i> 86 Item</a>
+                            <a href="reservations.php" class="deck-hero-btn primary"><i class="fa fa-plus"></i> New Booking</a>
+                            <a href="menu-vault.php" class="deck-hero-btn ghost"><i class="fa fa-ban"></i> 86 Item</a>
                         </div>
                     </div>
                 </section>
@@ -154,10 +154,12 @@
                             <div class="deck-card-icon"><i class="fa fa-bolt"></i></div>
                         </header>
                         <div class="deck-actions">
-                            <a href="reservations.html" class="deck-action-btn"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
-                            <a href="menu-vault.html" class="deck-action-btn"><i class="fa fa-ban"></i><span>86 Item</span></a>
-                            <a href="events.html" class="deck-action-btn"><i class="fa fa-bullhorn"></i><span>Post Event</span></a>
-                            <a href="message-inbox.html" class="deck-action-btn"><i class="fa fa-inbox"></i><span>Inbox</span></a>
+                            <a href="reservations.php" class="deck-action-btn"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
+                            <a href="menu-vault.php" class="deck-action-btn"><i class="fa fa-ban"></i><span>86 Item</span></a>
+                            <a href="events.php" class="deck-action-btn"><i class="fa fa-bullhorn"></i><span>Post Event</span></a>
+                            <a href="portfolio.php" class="deck-action-btn"><i class="fa fa-images"></i><span>Portfolio</span></a>
+                            <a href="message-inbox.php" class="deck-action-btn"><i class="fa fa-inbox"></i><span>Inbox</span></a>
+                            <a href="admin-settings.php" class="deck-action-btn"><i class="fa fa-cog"></i><span>Settings</span></a>
                         </div>
                     </article>
                 </div>
@@ -207,18 +209,19 @@
                         <header class="deck-card-head">
                             <div>
                                 <h3>Guest Flow</h3>
-                                <p>Live pipeline</p>
+                                <p>Website bookings + floor</p>
                             </div>
                             <div class="deck-card-icon"><i class="fa fa-stream"></i></div>
                         </header>
                         <div class="guest-flow" id="guestFlow"></div>
+                        <div class="pending-mini" id="pendingBookings"></div>
                     </article>
 
                     <article class="deck-card deck-card--third">
                         <header class="deck-card-head">
                             <div>
                                 <h3>Flavour Signals</h3>
-                                <p>Top plates tonight</p>
+                                <p>Tap a plate to 86 it on the website</p>
                             </div>
                             <div class="deck-card-icon"><i class="fa fa-chart-line"></i></div>
                         </header>
@@ -234,11 +237,11 @@
                             <div class="deck-card-icon"><i class="fa fa-cocktail"></i></div>
                         </header>
                         <div class="pour-ring">
-                            <div class="pour-chart" aria-hidden="true"><span class="pour-chart-value" id="barPourRing">142</span></div>
-                            <div class="pour-legend">
-                                <div class="c-beer"><span>Beers</span><span>36%</span></div>
-                                <div class="c-cocktail"><span>Cocktails</span><span>28%</span></div>
-                                <div class="c-soft"><span>Soft &amp; Juice</span><span>22%</span></div>
+                            <div class="pour-chart" id="pourChart" aria-hidden="true"><span class="pour-chart-value" id="barPourRing">—</span></div>
+                            <div class="pour-legend" id="pourLegend">
+                                <div class="c-beer"><span>Beers</span><span>—</span></div>
+                                <div class="c-cocktail"><span>Cocktails</span><span>—</span></div>
+                                <div class="c-soft"><span>Soft &amp; Juice</span><span>—</span></div>
                             </div>
                         </div>
                     </article>
@@ -256,7 +259,7 @@
                                 <h3>Message Inbox</h3>
                                 <p>Website contact form</p>
                             </div>
-                            <a href="message-inbox.html" class="deck-card-link">View all <i class="fa fa-arrow-right"></i></a>
+                            <a href="message-inbox.php" class="deck-card-link">View all <i class="fa fa-arrow-right"></i></a>
                         </header>
                         <div class="deck-scroll" id="inboxList"></div>
                     </article>
@@ -267,7 +270,7 @@
                                 <h3>Event Horizon</h3>
                                 <p>Upcoming terrace gatherings</p>
                             </div>
-                            <a href="events.html" class="deck-card-link">Manage <i class="fa fa-arrow-right"></i></a>
+                            <a href="events.php" class="deck-card-link">Manage <i class="fa fa-arrow-right"></i></a>
                         </header>
                         <div class="deck-scroll" id="eventList"></div>
                     </article>
@@ -276,9 +279,9 @@
                         <header class="deck-card-head">
                             <div>
                                 <h3>86 Board</h3>
-                                <p>Items off the line tonight</p>
+                                <p>Off the line — tap to restore on the public menu</p>
                             </div>
-                            <a href="menu-vault.html" class="deck-card-link">Menu Vault <i class="fa fa-arrow-right"></i></a>
+                            <a href="menu-vault.php" class="deck-card-link">Menu Vault <i class="fa fa-arrow-right"></i></a>
                         </header>
                         <div class="eighty-six-list" id="eightySixBoard"></div>
                     </article>
@@ -288,10 +291,10 @@
     </div>
 
     <nav class="vault-mobile-dock" aria-label="Quick navigation">
-        <a href="dashboard.html" class="dock-item active" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Deck</span></a>
-        <a href="reservations.html" class="dock-item" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Bookings</span></a>
-        <a href="message-inbox.html" class="dock-item" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Inbox</span></a>
-        <a href="menu-vault.html" class="dock-item" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu</span></a>
+        <a href="dashboard.php" class="dock-item active" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Deck</span></a>
+        <a href="reservations.php" class="dock-item" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Bookings</span></a>
+        <a href="message-inbox.php" class="dock-item" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Inbox</span></a>
+        <a href="menu-vault.php" class="dock-item" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu</span></a>
         <button type="button" class="dock-item" id="dockMenuBtn" aria-label="More options"><i class="fa fa-ellipsis-h"></i><span>More</span></button>
     </nav>
 

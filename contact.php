@@ -34,7 +34,7 @@
 
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="index.php" class="navbar-brand p-0">
                     <img src="img/logo.png" alt="De Angels Bar & Grills">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -42,14 +42,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="team.html" class="nav-item nav-link">Services</a>
-                        <a href="reservations.html" class="nav-item nav-link">Reservations</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="index.php" class="nav-item nav-link">Home</a>
+                        <a href="about.php" class="nav-item nav-link">About</a>
+                        <a href="menu.php" class="nav-item nav-link">Menu</a>
+                        <a href="team.php" class="nav-item nav-link">Services</a>
+                        <a href="reservations.php" class="nav-item nav-link">Reservations</a>
+                        <a href="contact.php" class="nav-item nav-link active">Contact</a>
                     </div>
-                    <a href="menu.html" class="btn btn-accent py-2 px-4">Order Now</a>
+                    <a href="menu.php" class="btn btn-accent py-2 px-4">Order Now</a>
                 </div>
             </nav>
 
@@ -60,7 +60,7 @@
                     <p class="page-lead">Visit the terrace, send a message, or follow the grills — we would love to host you.</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
                         </ol>
                     </nav>
@@ -75,7 +75,7 @@
                         <div class="contact-stat-item wow fadeInUp" data-wow-delay="0.1s">
                             <i class="fa fa-clock d-block"></i>
                             <h6>Open Daily</h6>
-                            <small class="d-block">10:00 AM – 5:00 AM</small>
+                            <small class="d-block" data-vault-setting="hours">10:00 AM – 5:00 AM</small>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -107,15 +107,15 @@
                         <div class="contact-info-tile">
                             <div class="contact-info-icon"><i class="fa fa-map-marker-alt"></i></div>
                             <h5>Visit The Terrace</h5>
-                            <p class="mb-3">Plot F16, Housing Area B, New Owerri. Look for the grill and open-air seating.</p>
-                            <a href="https://maps.google.com/maps?q=Plot%20F16%20Housing%20Area%20B%20New%20Owerri" target="_blank" rel="noopener" class="text-primary small fw-semi-bold">Get directions <i class="fa fa-arrow-right ms-1"></i></a>
+                            <p class="mb-3"><span data-vault-setting="address">Plot F16, Housing Area B, New Owerri</span>. Look for the grill and open-air seating.</p>
+                            <a href="https://maps.google.com/maps?q=Plot%20F16%20Housing%20Area%20B%20New%20Owerri" target="_blank" rel="noopener" class="text-primary small fw-semi-bold" data-vault-href="mapsUrl">Get directions <i class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="contact-info-tile accent">
                             <div class="contact-info-icon"><i class="fa fa-envelope"></i></div>
                             <h5>Send A Message</h5>
-                            <p class="mb-3">Tables, catering, events and takeaway — tell us what you need and we will reply the same day.</p>
+                            <p class="mb-3">Write to <a data-vault-setting="email" data-vault-href="email">hello@deangels.com</a> or use the form below for tables, catering and events.</p>
                             <a href="#contact-form" class="text-accent small fw-semi-bold">Use the form below <i class="fa fa-arrow-down ms-1"></i></a>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                             <div class="contact-info-icon"><i class="fa fa-calendar-check"></i></div>
                             <h5>Book A Table</h5>
                             <p class="mb-3">Reserve indoor seating, the terrace or a private corner for your next gathering.</p>
-                            <a href="reservations.html" class="small fw-semi-bold" style="color: var(--gold);">Reserve now <i class="fa fa-arrow-right ms-1"></i></a>
+                            <a href="reservations.php" class="small fw-semi-bold" style="color: var(--gold);">Reserve now <i class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -132,7 +132,7 @@
                             <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
                             <h5>Follow The Night</h5>
                             <p class="mb-3">See tonight’s grills, drinks and terrace energy as it happens on social.</p>
-                            <a href="https://instagram.com" target="_blank" rel="noopener" class="text-primary small fw-semi-bold">Follow on Instagram <i class="fa fa-arrow-right ms-1"></i></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="text-primary small fw-semi-bold" data-vault-href="instagram">Follow on Instagram <i class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -141,15 +141,15 @@
                     <div class="row g-0">
                         <div class="col-lg-6">
                             <div class="contact-map-wrap">
-                                <iframe class="w-100 h-100"
+                                <iframe class="w-100 h-100" data-vault-map
                                     src="https://maps.google.com/maps?q=Plot%20F16%20Housing%20Area%20B%20New%20Owerri&t=&z=16&ie=UTF8&iwloc=&output=embed"
                                     frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                                     tabindex="0" title="De Angels Bar and Grills location map"></iframe>
                                 <div class="contact-map-badge">
                                     <i class="fa fa-map-marker-alt"></i>
                                     <div>
-                                        <strong class="d-block">De Angels Bar &amp; Grills</strong>
-                                        <small class="text-white-50">Plot F16, Housing Area B, New Owerri</small>
+                                        <strong class="d-block" data-vault-setting="name">De Angels Bar &amp; Grills</strong>
+                                        <small class="text-white-50" data-vault-setting="address">Plot F16, Housing Area B, New Owerri</small>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +227,10 @@
                                             <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="reservations.html" class="btn btn-accent w-100 py-3">Book A Table Instead</a>
+                                            <a href="reservations.php" class="btn btn-accent w-100 py-3">Book A Table Instead</a>
+                                        </div>
+                                        <div class="col-12">
+                                            <div id="bookingSuccess" class="booking-success" hidden></div>
                                         </div>
                                     </div>
                                 </form>
@@ -243,6 +246,40 @@
             </div>
         </div>
 
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Already Messaged?</h5>
+                    <h1 class="mb-3">Check Your Enquiry</h1>
+                    <p class="mx-auto mb-5" style="max-width: 560px; color: var(--secondary);">Use the email and MG- reference from your confirmation. When the host team replies or archives your note, this status updates.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form id="vaultMessageLookupForm" class="booking-lookup-form">
+                            <div class="row g-3">
+                                <div class="col-md-5">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="msgLookupEmail" placeholder="Email">
+                                        <label for="msgLookupEmail">Email used to write</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="msgLookupRef" placeholder="MG-XXXX">
+                                        <label for="msgLookupRef">Reference (MG-XXXX)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 d-flex">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Look Up</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="vaultMessageLookupResult" class="booking-lookup-result" hidden></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid py-5 bg-cream">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -251,7 +288,7 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="#" class="social-connect-card">
+                        <a href="#" class="social-connect-card" data-vault-href="instagram">
                             <img src="img/grill-night.png" alt="Grill nights at De Angels">
                             <div class="social-connect-overlay">
                                 <i class="fab fa-instagram"></i>
@@ -261,7 +298,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="#" class="social-connect-card">
+                        <a href="#" class="social-connect-card" data-vault-href="facebook">
                             <img src="img/outdoor-terrace-about.png" alt="Outdoor dining at De Angels">
                             <div class="social-connect-overlay">
                                 <i class="fab fa-facebook-f"></i>
@@ -271,7 +308,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="#" class="social-connect-card">
+                        <a href="#" class="social-connect-card" data-vault-href="youtube">
                             <img src="img/menu-4.jpg" alt="Bar and drinks at De Angels">
                             <div class="social-connect-overlay">
                                 <i class="fab fa-youtube"></i>
@@ -294,7 +331,7 @@
                             <h1 class="mb-4">When We Welcome You</h1>
                             <div class="hours-row">
                                 <strong>Monday – Sunday</strong>
-                                <span>10:00 AM – 5:00 AM</span>
+                                <span data-vault-setting="hours">10:00 AM – 5:00 AM</span>
                             </div>
                             <div class="hours-row">
                                 <strong>Kitchen</strong>
@@ -314,7 +351,7 @@
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Getting Here</h5>
                         <h1 class="mb-4">Find The Terrace In New Owerri</h1>
-                        <p class="mb-4">We are at Plot F16, Housing Area B. Come hungry, come with friends, or come for a quiet plate and a cold drink.</p>
+                        <p class="mb-4">We are at <span data-vault-setting="address">Plot F16, Housing Area B, New Owerri</span>. Come hungry, come with friends, or come for a quiet plate and a cold drink.</p>
                         <div class="philosophy-item">
                             <div class="philosophy-icon"><i class="fa fa-car"></i></div>
                             <div>
@@ -411,8 +448,8 @@
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">See You On The Terrace</h5>
                     <h1 class="text-white mb-3">The Fire Is On</h1>
                     <p class="text-white-50 mb-4 mx-auto" style="max-width: 540px;">Reserve a table, walk in for takeaway, or follow us for tonight’s specials. De Angels is open every day.</p>
-                    <a href="reservations.html" class="btn btn-primary py-3 px-5 me-2 mb-2">Reserve A Table</a>
-                    <a href="menu.html" class="btn btn-accent py-3 px-5 mb-2">View The Menu</a>
+                    <a href="reservations.php" class="btn btn-primary py-3 px-5 me-2 mb-2">Reserve A Table</a>
+                    <a href="menu.php" class="btn btn-accent py-3 px-5 mb-2">View The Menu</a>
                 </div>
             </div>
         </div>
@@ -422,31 +459,34 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <img src="img/logo.png" alt="De Angels Bar & Grills" class="footer-logo">
-                        <p>Premium Meals. Great Grills. Amazing Moments.</p>
+                        <p data-vault-setting="tagline">Premium Meals. Great Grills. Amazing Moments.</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Explore</h4>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="menu.html">Our Menu</a>
-                        <a class="btn btn-link" href="team.html">Services</a>
-                        <a class="btn btn-link" href="reservations.html">Reservations</a>
-                        <a class="btn btn-link" href="contact.html">Contact</a>
-                        <a class="btn btn-link" href="admin/admin-dashboard.html">Admin Dashboard</a>
+                        <a class="btn btn-link" href="about.php">About Us</a>
+                        <a class="btn btn-link" href="menu.php">Our Menu</a>
+                        <a class="btn btn-link" href="team.php">Services</a>
+                        <a class="btn btn-link" href="reservations.php">Reservations</a>
+                        <a class="btn btn-link" href="contact.php">Contact</a>
+                        <a class="btn btn-link" href="admin/admin-dashboard.php">Admin Dashboard</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plot F16, Housing Area B, New Owerri</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span data-vault-setting="address">Plot F16, Housing Area B, New Owerri</span></p>
+                        <p class="mb-2" data-vault-hide-empty="phone"><i class="fa fa-phone-alt me-3"></i><a data-vault-setting="phone" data-vault-href="phone">Call us</a></p>
+                        <p class="mb-2" data-vault-hide-empty="email"><i class="fa fa-envelope me-3"></i><a data-vault-setting="email" data-vault-href="email">hello@deangels.com</a></p>
+                        <p class="mb-2" data-vault-hide-empty="whatsapp"><i class="fab fa-whatsapp me-3"></i><a data-vault-setting="whatsapp" data-vault-href="whatsapp" data-vault-keep-label="1">WhatsApp</a></p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="twitter" data-vault-hide-empty="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" data-vault-href="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday – Sunday</h5>
-                        <p>10:00 AM – 5:00 AM</p>
+                        <h5 class="text-light fw-normal">Opening Hours</h5>
+                        <p data-vault-setting="hours">Monday – Sunday · 10:00 AM – 5:00 AM</p>
                     </div>
                 </div>
             </div>
@@ -454,15 +494,15 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="index.html">De Angels Bar &amp; Grills</a>, All Rights Reserved.
+                            &copy; <a class="border-bottom" href="index.php" data-vault-setting="name">De Angels Bar &amp; Grills</a>, All Rights Reserved.
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="menu.html">Menu</a>
-                                <a href="reservations.html">Book</a>
-                                <a href="contact.html">Contact</a>
-                                <a href="admin/admin-dashboard.html">Admin</a>
+                                <a href="index.php">Home</a>
+                                <a href="menu.php">Menu</a>
+                                <a href="reservations.php">Book</a>
+                                <a href="contact.php">Contact</a>
+                                <a href="admin/admin-dashboard.php">Admin</a>
                             </div>
                         </div>
                     </div>
@@ -485,6 +525,7 @@
     <script src="admin/js/store.js"></script>
     <script src="js/vault-bridge.js"></script>
     <script src="js/vault-forms.js"></script>
+    <script src="js/vault-site.js"></script>
     <script src="js/main.js"></script>
 </body>
 

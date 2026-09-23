@@ -2,6 +2,8 @@
     'use strict';
 
     var SESSION_KEY = 'deangels_vault_session';
+    var ADMIN_EMAIL = 'admin@deangels.com';
+    var ADMIN_PASSWORD = 'DeAngels#2026';
 
     function getSession() {
         try {
@@ -23,6 +25,28 @@
 
         if (remember) {
             localStorage.setItem(SESSION_KEY + '_remember', email);
+        } else {
+            localStorage.removeItem(SESSION_KEY + '_remember');
+        }
+    }
+
+    function login(email, password, remember) {
+        var enteredEmail = (email || '').trim().toLowerCase();
+        var enteredPassword = password || '';
+
+        if (enteredEmail !== ADMIN_EMAIL || enteredPassword !== ADMIN_PASSWORD) {
+            return false;
+        }
+
+        setSession(enteredEmail, remember);
+        return true;
+    }
+
+    function getRememberedEmail() {
+        try {
+            return localStorage.getItem(SESSION_KEY + '_remember') || '';
+        } catch (e) {
+            return '';
         }
     }
 
@@ -36,7 +60,7 @@
 
     function requireAuth() {
         if (!isAuthenticated()) {
-            window.location.href = 'admin-login.html';
+            window.location.href = 'admin-login.php';
             return false;
         }
         return true;
@@ -44,7 +68,7 @@
 
     function redirectIfAuthenticated() {
         if (isAuthenticated()) {
-            window.location.href = 'dashboard.html';
+            window.location.href = 'dashboard.php';
             return true;
         }
         return false;
@@ -53,6 +77,8 @@
     window.VaultAuth = {
         getSession: getSession,
         setSession: setSession,
+        login: login,
+        getRememberedEmail: getRememberedEmail,
         clearSession: clearSession,
         isAuthenticated: isAuthenticated,
         requireAuth: requireAuth,

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Menu Vault | De Angels Admin</title>
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0807">
+    <link href="../img/logo.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="css/vault.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/manage.css" rel="stylesheet">
+</head>
+<body class="vault-body vault-dash" data-page="menu-vault">
+    <div class="vault-bg" aria-hidden="true"></div>
+    <div class="vault-grid" aria-hidden="true"></div>
+    <div class="vault-overlay" id="vaultOverlay" aria-hidden="true"></div>
+    <div class="vault-layout">
+        <aside class="vault-sidebar" id="vaultSidebar" aria-label="Admin navigation">
+            <div class="vault-sidebar-head">
+                <div class="vault-brand-row">
+                    <img src="../img/logo.png" alt="De Angels Bar &amp; Grills">
+                    <button type="button" class="vault-sidebar-close" id="sidebarClose" aria-label="Close menu"><i class="fa fa-times"></i></button>
+                </div>
+                <span class="vault-sidebar-tag"><i class="fa fa-shield-alt"></i> Command Deck</span>
+            </div>
+            <nav class="vault-nav">
+                <span class="vault-nav-label">Operations</span>
+                <a href="dashboard.php" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Overview</span></a>
+                <a href="reservations.php" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Reservations</span></a>
+                <a href="message-inbox.php" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Message Inbox</span></a>
+                <span class="vault-nav-label">Hospitality</span>
+                <a href="menu-vault.php" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu Vault</span></a>
+                <a href="events.php" data-nav="events"><i class="fa fa-glass-cheers"></i><span>Events</span></a>
+                <a href="portfolio.php" data-nav="portfolio"><i class="fa fa-images"></i><span>Portfolio</span></a>
+                <span class="vault-nav-label">System</span>
+                <a href="admin-settings.php" data-nav="admin-settings"><i class="fa fa-cog"></i><span>Admin Settings</span></a>
+                <a href="admin-dashboard.php"><i class="fa fa-th-large"></i><span>Admin Dashboard</span></a>
+                <a href="../index.php" target="_blank" rel="noopener"><i class="fa fa-globe"></i><span>View Website</span></a>
+            </nav>
+            <div class="vault-sidebar-foot">
+                <button type="button" class="vault-logout" id="vaultLogout"><i class="fa fa-sign-out-alt"></i> Sign Out</button>
+            </div>
+        </aside>
+        <div class="vault-main">
+            <header class="vault-topbar">
+                <div class="vault-topbar-start">
+                    <button class="vault-menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+                    <div class="vault-greeting">
+                        <p class="vault-greeting-kicker">Hospitality</p>
+                        <h1>Menu Vault</h1>
+                    </div>
+                </div>
+                <div class="vault-topbar-actions">
+                    <span class="vault-live-dot" aria-hidden="true"></span>
+                    <span class="vault-shift-pill" id="shiftPill">Grill Night</span>
+                    <span class="vault-live-clock" id="liveClock" aria-live="polite"></span>
+                    <div class="vault-avatar" id="userAvatar">D</div>
+                </div>
+            </header>
+            <main class="vault-content">
+                <div class="manage-toolbar">
+                    <h2>Kitchen Line Status</h2>
+                    <a href="dashboard.php" class="deck-card-link"><i class="fa fa-arrow-left"></i> Back to deck</a>
+                </div>
+
+                <div id="menuAlert" class="vault-alert" role="status" style="display:none"></div>
+
+                <section class="res-kpi-strip" aria-label="Menu snapshot">
+                    <button type="button" class="res-kpi" data-menu-filter="live"><span>Live</span><strong id="statLive">—</strong></button>
+                    <button type="button" class="res-kpi" data-menu-filter="86"><span>86'd</span><strong id="statEightySix">—</strong></button>
+                    <button type="button" class="res-kpi" data-menu-filter="Grills"><span>Grills</span><strong id="statGrills">—</strong></button>
+                    <button type="button" class="res-kpi" data-menu-filter="Mains"><span>Mains</span><strong id="statMains">—</strong></button>
+                    <button type="button" class="res-kpi" data-menu-filter="Fast Food"><span>Fast Food</span><strong id="statFastFood">—</strong></button>
+                    <button type="button" class="res-kpi" data-menu-filter="Drinks"><span>Drinks</span><strong id="statDrinks">—</strong></button>
+                    <article class="res-kpi"><span>Orders tonight</span><strong id="statOrders">—</strong></article>
+                </section>
+
+                <div class="manage-card mb-4">
+                    <h3 id="menuFormTitle" style="font-family:Oswald;margin:0 0 16px;font-size:1.05rem">Add Menu Item</h3>
+                    <p style="color:var(--vault-muted);margin:0 0 16px;font-size:13px">Prices, names and 86 status write through to the public menu and homepage in this browser. New dishes appear in the matching tab.</p>
+                    <form id="addMenuForm">
+                        <div class="manage-form-grid">
+                            <div class="manage-field"><label for="mName">Dish Name</label><input type="text" id="mName" required></div>
+                            <div class="manage-field"><label for="mPrice">Price (₦)</label><input type="number" id="mPrice" min="0" step="100" required></div>
+                            <div class="manage-field"><label for="mCategory">Category</label>
+                                <select id="mCategory">
+                                    <option>Grills</option>
+                                    <option>Mains</option>
+                                    <option>Fast Food</option>
+                                    <option>Drinks</option>
+                                </select>
+                            </div>
+                            <div class="manage-field"><label for="mImage">Image path</label><input type="text" id="mImage" placeholder="img/grill-night.png"></div>
+                            <div class="manage-field full"><label for="mDesc">Description</label><textarea id="mDesc" rows="2"></textarea></div>
+                            <div class="manage-field full">
+                                <button type="submit" class="vault-btn" id="menuSubmitBtn" style="width:auto;padding:12px 28px;max-width:100%">Add To Menu</button>
+                                <button type="button" class="manage-btn" id="menuCancelEdit" hidden style="margin-left:8px">Cancel edit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="manage-card">
+                    <div class="res-table-tools">
+                        <div class="res-filters">
+                            <button type="button" class="res-filter active" data-menu-filter="all">All</button>
+                            <button type="button" class="res-filter" data-menu-filter="live">Live</button>
+                            <button type="button" class="res-filter" data-menu-filter="86">86'd</button>
+                            <button type="button" class="res-filter" data-menu-filter="Grills">Grills</button>
+                            <button type="button" class="res-filter" data-menu-filter="Mains">Mains</button>
+                            <button type="button" class="res-filter" data-menu-filter="Fast Food">Fast Food</button>
+                            <button type="button" class="res-filter" data-menu-filter="Drinks">Drinks</button>
+                        </div>
+                        <label class="res-search">
+                            <input type="search" id="menuSearch" placeholder="Search dish, category…" aria-label="Search menu">
+                        </label>
+                    </div>
+                    <div class="manage-table-wrap">
+                        <table class="manage-table">
+                            <thead><tr><th>Item</th><th>Category</th><th>Price</th><th>Orders Tonight</th><th>Status</th><th>Actions</th></tr></thead>
+                            <tbody id="menuTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <nav class="vault-mobile-dock" aria-label="Quick navigation">
+        <a href="dashboard.php" class="dock-item" data-nav="dashboard"><i class="fa fa-th-large"></i><span>Deck</span></a>
+        <a href="reservations.php" class="dock-item" data-nav="reservations"><i class="fa fa-calendar-check"></i><span>Bookings</span></a>
+        <a href="message-inbox.php" class="dock-item" data-nav="message-inbox"><i class="fa fa-envelope"></i><span>Inbox</span></a>
+        <a href="menu-vault.php" class="dock-item active" data-nav="menu-vault"><i class="fa fa-utensils"></i><span>Menu</span></a>
+        <button type="button" class="dock-item" id="dockMenuBtn" aria-label="More options"><i class="fa fa-ellipsis-h"></i><span>More</span></button>
+    </nav>
+    <script src="js/auth.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/menu-admin.js"></script>
+</body>
+</html>

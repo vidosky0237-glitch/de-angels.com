@@ -92,10 +92,10 @@
                 </div>
 
                 <div class="vault-footer">
-                    <a href="admin-dashboard.html" class="vault-back">
+                    <a href="admin-dashboard.php" class="vault-back">
                         <i class="fa fa-th-large"></i> Admin Dashboard
                     </a>
-                    <a href="../index.html" class="vault-back">
+                    <a href="../index.php" class="vault-back">
                         <i class="fa fa-arrow-left"></i> Back to website
                     </a>
                     <small>&copy; De Angels Bar &amp; Grills</small>
