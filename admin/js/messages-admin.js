@@ -107,7 +107,7 @@
             ? VaultStore.getReservationById(msg.reservationId)
             : null;
         var bookingLine = booking
-            ? '<p class="message-link">Linked booking <strong>' + esc(booking.publicRef) + '</strong> · ' + esc(booking.status) + ' — <a href="reservations.php">open Reservations</a></p>'
+            ? '<p class="message-link">Linked booking <strong>' + esc(booking.publicRef) + '</strong> · ' + esc(booking.status) + ' — <a href="reservations.html">open Reservations</a></p>'
             : '';
 
         detail.innerHTML = '<div class="message-detail">' +

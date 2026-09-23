@@ -60,7 +60,7 @@
 
     function requireAuth() {
         if (!isAuthenticated()) {
-            window.location.href = 'admin-login.php';
+            window.location.href = 'admin-login.html';
             return false;
         }
         return true;
@@ -68,7 +68,7 @@
 
     function redirectIfAuthenticated() {
         if (isAuthenticated()) {
-            window.location.href = 'dashboard.php';
+            window.location.href = 'dashboard.html';
             return true;
         }
         return false;

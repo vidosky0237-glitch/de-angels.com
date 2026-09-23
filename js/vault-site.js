@@ -82,8 +82,8 @@
                     '<p>' + esc(e.description) + '</p>' +
                     '<small>' + (e.guests ? e.guests + ' guests · ' : '') + d.full + (e.time ? ' · ' + esc(e.time) : '') + '</small>' +
                     '<div class="vault-event-actions">' +
-                    '<a class="btn btn-primary btn-sm py-2 px-3" href="reservations.php?type=' + encodeURIComponent('Private gathering') + '">Book a table</a>' +
-                    '<a class="btn btn-outline-primary btn-sm py-2 px-3" href="contact.php">Enquire</a>' +
+                    '<a class="btn btn-primary btn-sm py-2 px-3" href="reservations.html?type=' + encodeURIComponent('Private gathering') + '">Book a table</a>' +
+                    '<a class="btn btn-outline-primary btn-sm py-2 px-3" href="contact.html">Enquire</a>' +
                     '</div></article></div>';
             }).join('');
         });

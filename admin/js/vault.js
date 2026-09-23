@@ -80,7 +80,7 @@
                 showAlert('Vault unlocked. Redirecting…', 'success');
 
                 setTimeout(function () {
-                    window.location.href = 'dashboard.php';
+                    window.location.href = 'dashboard.html';
                 }, 600);
             }, 900);
         });

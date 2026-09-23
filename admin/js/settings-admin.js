@@ -142,7 +142,7 @@
     if (signOutBtn) {
         signOutBtn.addEventListener('click', function () {
             if (window.VaultAuth) VaultAuth.clearSession();
-            window.location.href = 'admin-login.php';
+            window.location.href = 'admin-login.html';
         });
     }
 

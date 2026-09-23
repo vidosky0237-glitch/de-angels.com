@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>De Angels Bar &amp; Grills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/logo.png" rel="icon">
+    <script>
+        (function () {
+            var path = window.location.pathname || '';
+            var search = window.location.search || '';
+            var hash = window.location.hash || '';
+            var next = path.replace(/\.php$/i, '.html');
+
+            if (next === path) {
+                var parts = path.split('/');
+                var last = parts.pop();
+                if (!last || last.indexOf('.') === -1) {
+                    parts.push('index.html');
+                    next = parts.join('/') || '/index.html';
+                } else {
+                    next = '/index.html';
+                }
+            }
+
+            window.location.replace(next + search + hash);
+        })();
+    </script>
+</head>
+<body>
+    <p>Taking you back to De Angels… <a href="index.html">Continue</a></p>
+</body>
+</html>

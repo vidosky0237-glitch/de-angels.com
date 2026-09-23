@@ -122,7 +122,7 @@
         if (logoutBtn) {
             logoutBtn.addEventListener('click', function () {
                 VaultAuth.clearSession();
-                window.location.href = 'admin-login.php';
+                window.location.href = 'admin-login.html';
             });
         }
 
@@ -185,19 +185,19 @@
             if (snap.r === prev.r + 1 && VaultStore.shouldAlert('reservation')) {
                 var last = latest(data.reservations);
                 if (last && last.source === 'website') {
-                    showDeckToast('New booking ' + (last.publicRef || '') + ' · ' + last.name, 'reservations.php');
+                    showDeckToast('New booking ' + (last.publicRef || '') + ' · ' + last.name, 'reservations.html');
                 }
             }
             if (snap.m === prev.m + 1 && VaultStore.shouldAlert('message')) {
                 var msg = latest(data.messages);
                 if (msg && msg.source === 'website') {
-                    showDeckToast('New message ' + (msg.publicRef || '') + ' · ' + msg.name, 'message-inbox.php');
+                    showDeckToast('New message ' + (msg.publicRef || '') + ' · ' + msg.name, 'message-inbox.html');
                 }
             }
             if (snap.e === prev.e + 1 && VaultStore.shouldAlert('event')) {
                 var ev = latest(data.events);
                 if (ev && ev.published) {
-                    showDeckToast('New event ' + (ev.publicRef || '') + ' is on the website', 'events.php');
+                    showDeckToast('New event ' + (ev.publicRef || '') + ' is on the website', 'events.html');
                 }
             }
             prev = snap;

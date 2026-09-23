@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Dashboard | De Angels Bar &amp; Grills</title>
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0807">
+    <link href="../img/logo.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="css/vault.css" rel="stylesheet">
+    <style>
+        .admin-entry {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .admin-entry-card {
+            width: 100%;
+            max-width: 520px;
+            background: linear-gradient(160deg, rgba(26, 22, 20, 0.96), rgba(14, 11, 9, 0.98));
+            border: 1px solid var(--vault-border-strong);
+            border-radius: var(--vault-radius-xl);
+            box-shadow: var(--vault-shadow);
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .admin-entry-card img {
+            max-height: 64px;
+            width: auto;
+            background: #fff;
+            padding: 6px 12px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+        }
+
+        .admin-entry-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--vault-primary);
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .admin-entry-card h1 {
+            margin: 0 0 12px;
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.7rem, 4vw, 2.1rem);
+            color: var(--vault-text);
+            letter-spacing: 0.4px;
+        }
+
+        .admin-entry-card p {
+            margin: 0 0 28px;
+            color: var(--vault-muted);
+            line-height: 1.7;
+        }
+
+        .admin-entry-actions {
+            display: grid;
+            gap: 12px;
+        }
+
+        .admin-entry-actions .vault-btn {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .admin-entry-ghost {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            border: 1px solid var(--vault-border-strong);
+            color: var(--vault-text);
+            text-decoration: none;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .admin-entry-ghost:hover {
+            border-color: var(--vault-primary);
+            color: var(--vault-primary);
+        }
+
+        .admin-entry-links {
+            margin-top: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+        }
+
+        .admin-entry-links a {
+            color: var(--vault-muted);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .admin-entry-links a:hover {
+            color: var(--vault-primary);
+        }
+
+        .admin-entry-note {
+            margin-top: 24px;
+            font-size: 12px;
+            color: var(--vault-muted);
+        }
+    </style>
+</head>
+
+<body class="vault-body">
+    <div class="vault-bg" aria-hidden="true"></div>
+    <div class="vault-grid" aria-hidden="true"></div>
+
+    <main class="admin-entry">
+        <div class="admin-entry-card">
+            <img src="../img/logo.png" alt="De Angels Bar &amp; Grills">
+            <div class="admin-entry-kicker"><i class="fa fa-shield-alt"></i> Staff Access</div>
+            <h1>Admin Dashboard</h1>
+            <p>Sign in to the Command Deck to manage reservations, menu availability, events, portfolio and guest messages.</p>
+
+            <div class="admin-entry-actions" id="entryActions">
+                <a class="vault-btn" href="admin-login.html"><i class="fa fa-lock"></i> Sign In To Dashboard</a>
+                <a class="admin-entry-ghost" href="../index.html"><i class="fa fa-arrow-left"></i> Back To Website</a>
+            </div>
+
+            <div class="admin-entry-links">
+                <a href="dashboard.html">Overview</a>
+                <a href="reservations.html">Reservations</a>
+                <a href="menu-vault.html">Menu Vault</a>
+                <a href="events.html">Events</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="message-inbox.html">Message Inbox</a>
+                <a href="admin-settings.html">Admin Settings</a>
+            </div>
+
+            <p class="admin-entry-note"><i class="fa fa-info-circle"></i> Protected staff area — unauthorized access is not permitted.</p>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        (function () {
+            if (!window.VaultAuth) return;
+
+            if (VaultAuth.isAuthenticated()) {
+                window.location.replace('dashboard.html');
+                return;
+            }
+
+            var actions = document.getElementById('entryActions');
+            if (!actions) return;
+
+            actions.innerHTML =
+                '<a class="vault-btn" href="admin-login.html"><i class="fa fa-lock"></i> Sign In To Dashboard</a>' +
+                '<a class="admin-entry-ghost" href="../index.html"><i class="fa fa-arrow-left"></i> Back To Website</a>';
+        })();
+    </script>
+</body>
+
+</html>

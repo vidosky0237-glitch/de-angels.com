@@ -101,7 +101,7 @@
         if (guestFlow) {
             var gf = stats.guestFlow;
             guestFlow.innerHTML =
-                '<a class="flow-stage" href="reservations.php"><h4>' + gf.incoming + '</h4><p>Incoming</p></a>' +
+                '<a class="flow-stage" href="reservations.html"><h4>' + gf.incoming + '</h4><p>Incoming</p></a>' +
                 '<div class="flow-arrow"><i class="fa fa-chevron-right"></i></div>' +
                 '<div class="flow-stage"><h4>' + gf.seated + '</h4><p>Seated</p></div>' +
                 '<div class="flow-arrow"><i class="fa fa-chevron-right"></i></div>' +
@@ -152,7 +152,7 @@
                 inboxList.querySelectorAll('[data-msg]').forEach(function (item) {
                     item.addEventListener('click', function () {
                         VaultStore.markMessageRead(item.getAttribute('data-msg'));
-                        window.location.href = 'message-inbox.php';
+                        window.location.href = 'message-inbox.html';
                     });
                 });
             }
@@ -166,7 +166,7 @@
             } else {
                 eventList.innerHTML = evts.map(function (e) {
                     var d = VaultStore.formatDate(e.date);
-                    return '<a class="event-row" href="events.php">' +
+                    return '<a class="event-row" href="events.html">' +
                         '<div class="event-date"><strong>' + d.day + '</strong><span>' + d.month + '</span></div>' +
                         '<div class="event-info"><h4>' + esc(e.title) + '</h4><p>' + esc(e.description) +
                         (e.published ? '' : ' · private') + '</p></div>' +
